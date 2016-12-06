@@ -4,39 +4,39 @@
 
 ###1. Einführung  
 
-#####	[1.1 Bestandteile und Aufbau](#aa)
+##### [1.1 Bestandteile und Aufbau](#aa)
 
-##### 	[1.2 Ziele und Funktionen](#ab)
+#####   [1.2 Ziele und Funktionen](#ab)
 
-##### 	[1.3 Systemanforderungen](#ac)
+#####   [1.3 Systemanforderungen](#ac)
 
 ###2. Beschreibung und Aufbau der XML-Dokumente  
 
-#####	[2.1 Übersicht und allgemeine Hinweise](#ba)  
+##### [2.1 Übersicht und allgemeine Hinweise](#ba)  
 
-#####	[2.2 Modulbaum](#bb)  
+##### [2.2 Modulbaum](#bb)  
 
-#####	[2.3 Moduldaten Kursgliederung (1. Hälfte)](#bc)  
+##### [2.3 Moduldaten Kursgliederung (1. Hälfte)](#bc)  
 
-#####	[2.4 Moduldaten Veranstaltungsverzeichnis (2. Hälfte)](#bd)
+##### [2.4 Moduldaten Veranstaltungsverzeichnis (2. Hälfte)](#bd)
 
 ###3. Eingabe neuer Daten 
 
-#####	[3.1 Erstellen neuer Studiengänge](#ca)  
+##### [3.1 Erstellen neuer Studiengänge](#ca)  
 
-#####	[3.2 Erstellen neuer Module](#cb)  
+##### [3.2 Erstellen neuer Module](#cb)  
 
-#####	[3.3 Erstellen neuer Kurse](#cc)  
+##### [3.3 Erstellen neuer Kurse](#cc)  
 
 ###4. Änderungen bei bereits bestehenden Veranstaltungen  
 
-#####	[4.1 Namensänderungen von Modulen und Kursen](#da)  
+##### [4.1 Namensänderungen von Modulen und Kursen](#da)  
 
-#####	[4.2 Änderung von Studienganginformationen](#db)
+##### [4.2 Änderung von Studienganginformationen](#db)
 
-#####	[4.3 Anpassung von Credit Points](#dc)
+##### [4.3 Anpassung von Credit Points](#dc)
 
-#####	[4.4 Änderung von Vorlesungs- und Übungszeiten](#dd)
+##### [4.4 Änderung von Vorlesungs- und Übungszeiten](#dd)
 
 ###5. Zusammenfügen der XML-Dokumente
 
@@ -121,7 +121,7 @@ Außerdem beginnt **jede** Zeile mit einem **kleiner als(<)** und endet mit eine
 Das XML-Dokument Modulbaum bietet eine erste Übersicht über die verfügbaren Module. Das Hauptelement ist die jeweilige **Fakultät(1)**, dargestellt durch den `Modulbaum`-Knoten. Dieser ist gegliedert in die einzelnen **Studiengänge(2)**.(Wirtschaftschemie Bachelor, Master...), welche wiederum in die **Wahl- und Pflichtmodule(3)** des entsprechenden Studiengangs unterteilt sind. Als unterste Gliederungsebene werden die einzelnen **Module(4)** aufgeführt.
 
 
-![](Gliederung,Modulbaum.jpg)
+![](gliederung,modulbaum.jpg)
 
 
 #### <a name="abkmb"></a> Abkürzungsverzeichnis:
@@ -166,7 +166,7 @@ Das XML-Dokument Modulbaum bietet eine erste Übersicht über die verfügbaren M
 **max-cp:** Maximale Anzahl an Credit Points die erreicht werden kann 
 
 
-![](Abk.Modulbaum.jpg)
+![](abk.modulbaum.jpg)
 
 
 ####Start- und Endausdrücke
@@ -193,7 +193,7 @@ Start: **`<m`**
 Ende: **`/>`**
 
 
-![](Start-Ende,Modulbaum.jpg)
+![](start-ende,modulbaum.jpg)
 
 
 ### <a name="bc"></a>2.3 Moduldaten Kursgliederung (1.Hälfte)
@@ -205,7 +205,7 @@ Ende: **`/>`**
 In dem XML-Dokument Moduldaten wird die Gliederung des Modulbaums fortgeführt und erweitert. Zuerst erfolgt die Gliederung in die einzelnen **Studiengänge(1)** und die darin enthaltenen **Module(2)**. Diese wiederum unterteilen sich in die **Kurse(3)** aus denen sich das Modul zusammensetzt.
 
 
-![](Gliederung,Moduldaten.jpg)
+![](gliederung,moduldaten.jpg)
 
 
 #### <a name="abkmmd1"></a> Abkürzungsverzeichnis:
@@ -226,7 +226,7 @@ In dem XML-Dokument Moduldaten wird die Gliederung des Modulbaums fortgeführt u
 **semester:** Semester in denen der Kurs stattfindet, findet der Kurs in mehreren Semestern statt werden diese durch ein Komma getrennt (z.B. semester="3,5")
 
 
-![](Abk.Moduldaten.jpg)
+![](abk.moduldaten.jpg)
 
 
 ####Start- und Endausdrücke
@@ -253,7 +253,7 @@ Start: **`<abstract-unit>`**
 Ende: **`/>`**
 
 
-![](Start-Ende,Moduldaten.jpg)
+![](start-ende,moduldaten.jpg)
 
 
 ### <a name="bd"></a>2.4 Moduldaten Veranstaltungsverzeichnis (2.Hälfte)
@@ -265,7 +265,7 @@ Ende: **`/>`**
 Die zweite Hälfte des XML-Dokuments Moduldaten ist in die einzelnen **Studiengänge(1)** untergliedert. Pro Studiengang sind alle verfügbaren **Kurse(2)** aufgelistet, welche sich in die einzelnen **Gruppen(3)** unterteilen, aus denen sich der Kurs zusammensetzt. Zu jeder Gruppe werden die genauen **Termine(4)** der Veranstaltung angegeben.
 
 
-![](Gliederung,Moduldaten2.jpg) 
+![](gliederung,moduldaten2.jpg) 
 
 
 #### <a name="abkmd2"></a> Abkürzungsverzeichnis
@@ -288,7 +288,7 @@ Die zweite Hälfte des XML-Dokuments Moduldaten ist in die einzelnen **Studieng�
 **rhythm:** Rhythmus der Veranstaltung (0= jede woche, 1= jede gerade Woche, 2= jede ungerade Woche, 3= Blockveranstaltung)
 
 
-![](Abk.Moduldaten2.jpg)
+![](abk.moduldaten2.jpg)
 
 
 ####Start- und Endausdrücke
@@ -320,7 +320,7 @@ Start: **`abstract-unit`**
 Ende: **`/>`**  
 
 
-![](Start-Ende,Moduldaten2.jpg) 
+![](start-ende,moduldaten2.jpg) 
 
 
 
@@ -338,44 +338,44 @@ Bei dem Erstellen neuer Studiengänge müssen beide Dokumente, Modulbaum und Mod
 1. **Öffnen Datei Modulbaum.**
 2. **Scrollen bis vorletze Zeile.**  
 3. **Erstellen des Studiengangs:**  
-	1. Ausdruck als vorletzte Zeile einfügen: `<b cp="" abschl="" stg="" kzfa="" pversion="" name="">` (bei der philosophischen Fakultät kann auf den Ausdruck `cp=""` verzichtet werden, da keine Credit Points angegeben werden).  
-	2. Informationen über den Studiengang in die Anführungszeichen einsetzen (siehe [Abkürzungsverzeichnis](#abkmb)).  
-	3. **Hinweis:** Bei der Eintragung darauf achten, dass der Ausdruck `</modulbaum>` weiterhin ganz am Ende des Dokuments steht 
+  1. Ausdruck als vorletzte Zeile einfügen: `<b cp="" abschl="" stg="" kzfa="" pversion="" name="">` (bei der philosophischen Fakultät kann auf den Ausdruck `cp=""` verzichtet werden, da keine Credit Points angegeben werden).  
+  2. Informationen über den Studiengang in die Anführungszeichen einsetzen (siehe [Abkürzungsverzeichnis](#abkmb)).  
+  3. **Hinweis:** Bei der Eintragung darauf achten, dass der Ausdruck `</modulbaum>` weiterhin ganz am Ende des Dokuments steht 
 4. **Gliederung des Studienganges in verschiedene Modularten (Wahl-, Pflicht-, Aufbau-, Vertiefungsmodule usw.):**  
-	1. Die Zeile: `<l name="" min-cp="" max-cp="">` für jede Modulart einfügen.  
-	2. Informationen in die Anführungszeichen einfügen.  
+  1. Die Zeile: `<l name="" min-cp="" max-cp="">` für jede Modulart einfügen.  
+  2. Informationen in die Anführungszeichen einfügen.  
 5. **Einfügen der einzelnen Module:**
-	1. Für jedes Modul wird die Zeile: `<m cp="" name="" pordnr=""/>` eingefügt.  
-	2. Informationen in die Anführungszeichen einsetzen.  
+  1. Für jedes Modul wird die Zeile: `<m cp="" name="" pordnr=""/>` eingefügt.  
+  2. Informationen in die Anführungszeichen einsetzen.  
 6. **Schließen der einzelnen Abschnitte:**
-	1. Nach dem Eintragen der einzelnen Module den Ausdruck `</l>` verwenden um die Gliederung in Modularten aus Schritt 4 zu beenden.  
-	2. Zum Schließen des Studienganges den Ausdruck `</b>` verwenden.  
+  1. Nach dem Eintragen der einzelnen Module den Ausdruck `</l>` verwenden um die Gliederung in Modularten aus Schritt 4 zu beenden.  
+  2. Zum Schließen des Studienganges den Ausdruck `</b>` verwenden.  
 **Beispiel Bachelor Wirtschaftschemie (nur Pflichtmodule eingefügt)**
 
 
-![](Anleitung4.jpg)
+![](anleitung4.jpg)
 
 
 ##### <a name="anl1"></a>Eintragungen im Kursverzeichnis des Dokuments Moduldaten (1. Abschnitt)   
 
 
-![](Anleitung1.jpg)
+![](anleitung1.jpg)
 1. **Öffnen der Datei Moduldaten.**  
 2. **Scrollen bis zum Ende des 1. Abschnitts der Datei.**
- 	Nachfolgende Eintragungen werden zwischen den Audrücken `<modules>` und `</modules>` in das Dokument eingetragen.
+  Nachfolgende Eintragungen werden zwischen den Audrücken `<modules>` und `</modules>` in das Dokument eingetragen.
 3. **Erstellen eines Moduls:**
-	1. Die Zeile `<module title="" id="" elective-units="" type="" pordnr="" cp="">` einfügen (Bei der philosophischen Fakultät kann auf den Ausdruck `cp=""` verzichtet werden, da die Module nicht auf Credit Points basieren).  
-	2. Informationen in die Anführungszeichen einsetzen (siehe [Abkürzungsverzeichnis](#abkmd1)).  
+  1. Die Zeile `<module title="" id="" elective-units="" type="" pordnr="" cp="">` einfügen (Bei der philosophischen Fakultät kann auf den Ausdruck `cp=""` verzichtet werden, da die Module nicht auf Credit Points basieren).  
+  2. Informationen in die Anführungszeichen einsetzen (siehe [Abkürzungsverzeichnis](#abkmd1)).  
 4. **Einfügen der einzelnen Kurse:**
-	1. Die Zeile `<abstract-unit title="" id="" type="" semester=""/>` für jeden Kurs einfügen.  
-	2. Informationen in die Anführungszeichen einsetzen.
+  1. Die Zeile `<abstract-unit title="" id="" type="" semester=""/>` für jeden Kurs einfügen.  
+  2. Informationen in die Anführungszeichen einsetzen.
 5. **Schließen des Moduls:**  
 Nach dem Eintragen aller Kurse wird das Modul durch den Ausdruck `</modules>` geschlossen.   
 
 **Beispiel Modul**
 
 
-![](Anleitung5.jpg)
+![](anleitung5.jpg)
 
 
 **Hinweis:** Es ist darauf zu achten, dass der Ausdruck `</modules>` weiterhin am Ende der Kursgliederung steht.  
@@ -390,24 +390,24 @@ Bei dem Erstellen neuer Studiengänge müssen beide Dokumente, Modulbaum und Mod
 
 3. **Erstellen eines Kurses:** 
  
-	1. Die Zeile `< unit id="" title="" semester="">` einfügen.
-	
-	2. Informationen in die Anführungszeichen einsetzen (siehe [Abkürzungsverzeichnis](#abkmd2)).  
+  1. Die Zeile `< unit id="" title="" semester="">` einfügen.
+  
+  2. Informationen in die Anführungszeichen einsetzen (siehe [Abkürzungsverzeichnis](#abkmd2)).  
 4. **Einzelne Gruppen einfügen:**  
-	
-	1. Anfangswert `<group>` setzen.  
-	
-	2. Die Zeile `<session day="" time="" duration="" rhythm=""/>` einfügen.  
-	
-	3. Informationen in die Anführungszeichen einsetzen.  
-	
-	4. Endwert `</group>` setzen.  
-  	
-	5. Schritte 4.1-4.4 wiederholen bis alle Gruppen pro Kurs eingetragen sind.  
-	
-	6. Zeile `<abstract-unit id=""/>` einfügen (kann bei mehr als einer ID pro Kurs auch öfters eingefügt werden).  
-	
-	7. Informationen in die Anführungszeichen einsetzen.  
+  
+  1. Anfangswert `<group>` setzen.  
+  
+  2. Die Zeile `<session day="" time="" duration="" rhythm=""/>` einfügen.  
+  
+  3. Informationen in die Anführungszeichen einsetzen.  
+  
+  4. Endwert `</group>` setzen.  
+    
+  5. Schritte 4.1-4.4 wiederholen bis alle Gruppen pro Kurs eingetragen sind.  
+  
+  6. Zeile `<abstract-unit id=""/>` einfügen (kann bei mehr als einer ID pro Kurs auch öfters eingefügt werden).  
+  
+  7. Informationen in die Anführungszeichen einsetzen.  
 
 **Hinweis:** Sollte es innerhalb eines Kurses mehrere Veranstaltungen (z.B. 2 Vorlesungen) geben von der jede belegt werden muss, so trägt man in einer `<group>` mehrere `sessions` ein.  
 
@@ -419,7 +419,7 @@ Nachdem alle Gruppen eingetragen wurden, wird der Kurs mit dem Ausdruck `</unit>
 **Beispiel Kurs**
 
 
-![](Anleitung6.jpg)
+![](anleitung6.jpg)
 
 
 **Hinweis:** Die beiden Ausdrücke `</units>` und `</data>` müssen weiterhin am Ende des Dokuments stehen.
@@ -441,10 +441,10 @@ Bei der Erstellung neuer Module müssen beide XML-Dokumente, Modulbaum und Modul
 3. Raussuchen der relevanten Modulart (z.B Pflicht-, Wahlmodul).  
 
 4. Eintragen des Moduls:    
-	
-	1. Einfügen der Zeile  `<m cp="" name="" pordnr=""/>`.  
-	
-	2. Informationen in die Anführungszeichen einsetzen (siehe [Abkürzungsverzeichnis](#abkmb)).
+  
+  1. Einfügen der Zeile  `<m cp="" name="" pordnr=""/>`.  
+  
+  2. Informationen in die Anführungszeichen einsetzen (siehe [Abkürzungsverzeichnis](#abkmb)).
 
 
 #####Eintragung im Kursverzeichnis des Dokuments Moduldaten (1. Abschnitt)
@@ -473,10 +473,10 @@ Für das Erstellen neuer Kurse ist nur das Dokument Moduldaten relevant.
 2. Raussuchen des relevanten Moduls.  
 
 3. Eintragen des neuen Kurses:  
-	
-	1. Einfügen der Zeile `<abstract-unit title="" id="a" type="" semester=""/>`.  
-	
-	2. Informationen in die Anführungszeichen einsetzen (siehe [Abkürzungsverzeichnis](#abkmd1)).  
+  
+  1. Einfügen der Zeile `<abstract-unit title="" id="a" type="" semester=""/>`.  
+  
+  2. Informationen in die Anführungszeichen einsetzen (siehe [Abkürzungsverzeichnis](#abkmd1)).  
 
 
 **Achtung:** Nach dem Eintragen des neuen Kurses muss bei dem entsprechenden Modul der Eintrag zu `elective-units=""` angepasst werden.
@@ -570,13 +570,13 @@ Die Anpassung von Credit Points erfolgt in der Datei Modulbaum, sowie in der Kur
 2. Suchen des relevanten Studienganges und des zu ändernden Kurses.  
 
 3. Anpassung der Credit Points für Modul und Studiengang.  
-	
-	1.  Anpassung der Credit Points pro Modul durch Eintragung in das Feld `cp=""` (rot markiert).   
-	
-	2. Nachdem die Credit Points in einem oder mehreren Modulen eines Studienganges angepasst wurden, müssen die Angaben zum Studiengang ebenfalls angepasst werden. Anpassung erfolgt durch Eintragung in die Felder `cp=""_, _min-cp=""_ und _max-cp=""` (gelb markiert).
+  
+  1.  Anpassung der Credit Points pro Modul durch Eintragung in das Feld `cp=""` (rot markiert).   
+  
+  2. Nachdem die Credit Points in einem oder mehreren Modulen eines Studienganges angepasst wurden, müssen die Angaben zum Studiengang ebenfalls angepasst werden. Anpassung erfolgt durch Eintragung in die Felder `cp=""_, _min-cp=""_ und _max-cp=""` (gelb markiert).
 
 
-![](Anleitung7.jpg)
+![](anleitung7.jpg)
 
 
 #####Moduldaten
@@ -602,7 +602,7 @@ Bei der reinen Änderung von Veranstaltungszeiten ist nur die zweite Hälfte des
 2.Scrollen bis zum Ende der Kursgliederung, welches durch den Ausdruck `</modules>` gekenzeichnet ist.
 
 
-![](Anleitung1.jpg)
+![](anleitung1.jpg)
 
 
 3.Suchen des Kurses dessen Veranstaltungszeiten geändert werden sollen.  
@@ -616,7 +616,7 @@ Nachdem der entsprechende Kurs gefunden wurde hat man mehrere Möglichkeiten:
 Kurse bestehen meist aus mehr als nur einer Gruppe, daher ist es wichtig genau die Gruppe auszuwählen die auch verändert werden soll. Nachdem die richtige Gruppe ausfindig gemacht wurde, können die vier Felder unter `session` beliebig verändert werden (Bedeutung siehe [Abkürzungsverzeichnis](#abkmd2)).
 
 
-![](Anleitung2.jpg) 
+![](anleitung2.jpg) 
 
 
 #####Löschen einer Gruppe  
@@ -656,13 +656,13 @@ Bei dem Erstellen einer neuen Gruppe wird wie folgt vorgegangen:
 Um die eingegebenen Daten weiterverwenden zu können, müssen die beiden XML-Dateien Modulbaum und Moduldaten zu einer SQlite-Datei zusammengefügt werden. Hierfür wird die Das Program **mincer** benötigt, nach dem Öffnen der Datei wird folgender Bildschirm angezeigt:
 
 
-![](mincer.jpg)  
+![](mincer.jpg)
 
 
 Nach einem Klick auf das Feld `Modul-Baum-Datei öffnen`, ist nun die Datei Modulbaum auszuwählen. Dies wird mit dem Feld `Modul-Daten-Datei öffnen` und der Datei Moduldaten wiederholt. Nun wird mit einem Klick auf das Feld `Erzeugen und Speichern` die entsprechende SQlite-Datei erstellt.
 
 
-![](mincer2.jpg)  
+![](mincer2.jpg) 
 
 
 Als letztes muss nun noch der Speicherort und der Name der neuen SQlite-Datenbank angegeben werden und das Erstellen der neuen Datenbank ist beendet.
@@ -784,7 +784,7 @@ Hierfür klickt man auf das Feld `Anzeigen` und wählt die entsprechende Funktio
 Es erscheint ein roter Kasten mit einem Kreuz. Dieser kann durch einen Klick auf den Button `Los` wieder entfernt werden.
 
 
-![](Hauptanwendung6.jpg)
+![](hauptanwendung6.jpg)
 
 
 ### <a name="fbc"></a>Partielle Studienpläne
@@ -815,14 +815,14 @@ Sollte die ausgewählte Kombination studierbar sein erscheint unter dem Feld `ch
 
 
 
-![](Hauptanwendung4.jpg)
+![](hauptanwendung4.jpg)
 
 
 
 Sollte statt dem grünen Kasten ein roter Kasten mit einem Kreuz erscheinen, so ist die gewählte Fächerkombination, unter Berücksichtigung der ausgewählten Module und Kurse, nicht studierbar.
 
 
-![](Hauptanwendung5.jpg)
+![](hauptanwendung5.jpg)
 
 
 ### <a name="fbd"></a>Stapel-Stundenpläne
@@ -850,7 +850,7 @@ Nach dem Berechnen können die Studiengänge auf dem Computer gespeichert werden
 2. Speichern der Studienverlaufspläne als Zip-Datei durch Klick auf das Feld `Zip-Datei exportieren`. 
 
 
-![](Hauptanwendung7.jpg)
+![](hauptanwendung7.jpg)
 
 
 
@@ -1021,7 +1021,7 @@ Die Kategorie `Pflichtfächer pro Studiengang` umfasst alle Module die laut Prü
 Im oberen Abschnitt könnnen die einzelnen Studiengänge ausgewählt werden, woraufhin im unteren Abschnitt die Pflichtfächer des ausgewählten Studienganges angezeigt werden.
 
 
-![](Bericht2.jpg)
+![](bericht2.jpg)
 
 
 ##### <a name="xe"></a> 5. Quasi-Pflichtfächer pro Studiengang
