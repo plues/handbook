@@ -166,7 +166,7 @@ Das XML-Dokument Modulbaum bietet eine erste Übersicht über die verfügbaren M
 **max-cp:** Maximale Anzahl an Credit Points die erreicht werden kann 
 
 
-![](abk.modulbaum.jpg)
+![](abk-modulbaum.jpg)
 
 
 ####Start- und Endausdrücke
@@ -226,7 +226,7 @@ In dem XML-Dokument Moduldaten wird die Gliederung des Modulbaums fortgeführt u
 **semester:** Semester in denen der Kurs stattfindet, findet der Kurs in mehreren Semestern statt werden diese durch ein Komma getrennt (z.B. semester="3,5")
 
 
-![](abk.moduldaten.jpg)
+![](abk-moduldaten.jpg)
 
 
 ####Start- und Endausdrücke
@@ -288,7 +288,7 @@ Die zweite Hälfte des XML-Dokuments Moduldaten ist in die einzelnen **Studieng�
 **rhythm:** Rhythmus der Veranstaltung (0= jede woche, 1= jede gerade Woche, 2= jede ungerade Woche, 3= Blockveranstaltung)
 
 
-![](abk.moduldaten2.jpg)
+![](abk-moduldaten2.jpg)
 
 
 ####Start- und Endausdrücke
