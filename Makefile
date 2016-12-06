@@ -15,7 +15,7 @@ handbook.html: handbook-1.0.0-dev.html
 	cp $< $@
 
 handbook-1.0.0-dev.pdf: $(MARKDOWN)
-	pandoc --standalone -f markdown -t latex $< -o $@
+	pandoc --standalone -f markdown -t latex $(MARKDOWN) -o $@
 
 handbook.pdf: handbook-1.0.0-dev.pdf
 	cp $< $@
