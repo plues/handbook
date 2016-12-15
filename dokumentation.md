@@ -303,14 +303,14 @@ Sollte die ausgewählte Kombination studierbar sein erscheint unter dem Feld `ch
 
 
 
-![](partiell.studienplan.jpg)
+![](partiell-studienplan.jpg)
 
 
 
 Sollte statt dem grünen Kasten ein roter Kasten mit einem Kreuz erscheinen, so ist die gewählte Fächerkombination, unter Berücksichtigung der ausgewählten Module und Kurse, nicht studierbar.
 
 
-![](partiell.studienplan2.jpg)
+![](partiell-studienplan2.jpg)
 
 
 ### <a name="fbd"></a>Stapel-Stundenpläne
@@ -338,7 +338,7 @@ Nach dem Berechnen können die Studiengänge auf dem Computer gespeichert werden
 2. Speichern der Studienverlaufspläne als Zip-Datei durch Klick auf das Feld `Zip-Datei exportieren`. 
 
 
-![](stapel.stundenplan.jpg)
+![](stapel-stundenplan.jpg)
 
 
 
