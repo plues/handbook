@@ -6,57 +6,63 @@
 
 ##### [1.1 Bestandteile und Aufbau](#aa)
 
-#####   [1.2 Ziele und Funktionen](#ab)
+##### [1.2 Ziele und Funktionen](#ab)
 
-#####   [1.3 Systemanforderungen](#ac)
+##### [1.3 Systemanforderungen](#ac)
 
-###2. Beschreibung und Aufbau der XML-Dokumente  
+###2. Umgang mit der Hauptanwendung
 
-##### [2.1 Übersicht und allgemeine Hinweise](#ba)  
+##### [2.1 Starten der Hauptanwendung und Einlesen der Daten](#fa)
 
-##### [2.2 Modulbaum](#bb)  
+##### [2.2 Hauptfunktionen](#fb)
 
-##### [2.3 Moduldaten Kursgliederung (1. Hälfte)](#bc)  
+##### [2.3 Weitere Funktionen](#fc)
 
-##### [2.4 Moduldaten Veranstaltungsverzeichnis (2. Hälfte)](#bd)
+###3. Anwendungsmöglichkeiten
 
-###3. Eingabe neuer Daten 
+##### [3.1 Anwendungsmöglichkeiten der Hauptanwendung](#wa) 
 
-##### [3.1 Erstellen neuer Studiengänge](#ca)  
+##### [3.2 Arbeiten mit den XML-Dokumenten](#wb) 
 
-##### [3.2 Erstellen neuer Module](#cb)  
+###4. Beschreibung und Aufbau der XML-Dokumente  
 
-##### [3.3 Erstellen neuer Kurse](#cc)  
+##### [4.1 Übersicht und allgemeine Hinweise](#ba)  
 
-###4. Änderungen bei bereits bestehenden Veranstaltungen  
+##### [4.2 Modulbaum](#bb)  
 
-##### [4.1 Namensänderungen von Modulen und Kursen](#da)  
+##### [4.3 Moduldaten Kursgliederung (1. Hälfte)](#bc)  
 
-##### [4.2 Änderung von Studienganginformationen](#db)
+##### [4.4 Moduldaten Veranstaltungsverzeichnis (2. Hälfte)](#bd)
 
-##### [4.3 Anpassung von Credit Points](#dc)
+###5. Eingabe neuer Daten 
 
-##### [4.4 Änderung von Vorlesungs- und Übungszeiten](#dd)
+##### [5.1 Erstellen neuer Studiengänge](#ca)  
 
-###5. Zusammenfügen der XML-Dokumente
+##### [5.2 Erstellen neuer Module](#cb)  
 
-##### [5.1 Zusammenfügen der XML-Dokumente](#ea)
+##### [5.3 Erstellen neuer Kurse](#cc)  
 
-###6. Umgang mit der Hauptanwendung
+###6. Änderungen bei bereits bestehenden Veranstaltungen  
 
-##### [6.1 Starten der Hauptanwendung und Einlesen der Daten](#fa)
+##### [6.1 Namensänderungen von Modulen und Kursen](#da)  
 
-##### [6.2 Hauptfunktionen](#fb)
+##### [6.2 Änderung von Studienganginformationen](#db)
 
-##### [6.3 Weitere Funkitonen](#fc)
+##### [6.3 Anpassung von Credit Points](#dc)
 
-###7. Häufig auftretende Fehler
+##### [6.4 Änderung von Vorlesungs- und Übungszeiten](#dd)
 
-##### [7.1 Beim Starten des Programms](#ga)
+###7. Zusammenfügen der XML-Dokumente
 
-##### [7.2 Beim Einlesen der Datenbank](#gb)
+##### [7.1 Zusammenfügen der XML-Dokumente](#ea)
 
-##### [7.3 Beim Zusammenfügen der XML-Dokumente](#gc)
+###8. Häufig auftretende Fehler
+
+##### [8.1 Beim Starten des Programms](#ga)
+
+##### [8.2 Beim Einlesen der Datenbank](#gb)
+
+##### [8.3 Beim Zusammenfügen der XML-Dokumente](#gc)
 
 ## <a name="a"></a>1. Einführung:
 
@@ -91,10 +97,705 @@ Um diese Ziele zu erreichen bietet das Planungswerkzeug eine vollständige Über
 Um ein vernünftiges Arbeiten mit dem Planungswerkzeug für überschneidungsfreies Studieren zu gewährleisten wird ein Rechner mit mindestens **4 Gigabyte Arbeitsspeicher** und einem **64-bit Betriebssystem** benötigt. Des Weiteren ist das Programm **java 8 64-bit**   ([Download](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)) erforderlich.
 
 
-## <a name="b"></a>2. Beschreibung und Aufbau der XML-Dokumente
+#2. Umgang mit der Hauptanwendung
 
 
-###2.1 Übersicht und allgemeine Hinweise
+### <a name="fa"></a> 2.1 Starten der Hauptanwendung und Einlesen der Daten
+
+
+Die Hauptanwendung wird durch die Datei **plues-2.0.0-PREVIEW2** gestartet. Nach dem Starten erscheint folgender Bildschirm:
+
+
+![](hauptanwendung1.jpg)
+
+
+
+Als nächster Schritt muss die entsprechende Datenbank im Programm geöffnet werden. Hierfür wird wie folgt vorgegangen:
+
+1. Klick auf das Feld `Datei` im oberen linken Teil der Startseite.
+
+2. Klick auf das Feld `Öffnen`. 
+
+3. Auswählen der zu öffnenden Datenbank.
+
+4. Auswahl bestätigen durch Klick auf das Feld `Öffnen`.
+
+Nach dem Öffnen der Datenbank beginnt das Programm mit dem Einlesen der Daten. Angezeigt wird dies auf der rechten Seite des Bildschirms.
+
+
+![](hauptanwendung2.jpg)
+
+
+Das Einlesen kann je nach Größe der Datenbank einige Zeit in Anspruch nehmen. Nachdem die Datenbank eingelesen wurde können alle Funktionen des Tools genutzt werden.
+
+
+## <a name="fb"></a> 2.2 Hauptfunktionen
+
+
+###Übersicht
+
+
+Das Planungswerkzeug für überschneidungsfreies Studieren bietet verschiedene Funktionen, die die Arbeit mit Studienplänen vereinfachen und somit Überschneidungen verhindern sollen:
+
+1. [Stundenplanansicht](#fba)
+
+2. [PDF-Studienpläne](#fbb)
+
+3. [Partielle Studienpläne](#fbc)
+
+4. [Stapel-Stundenpläne](#fbd)
+
+5. [Konfliktmatrix](#fbe)
+
+6. [Konfliktsuche](#fbf)
+
+Diese sind im oberen Drittel der Startseite aufgelistet.
+
+
+![](hauptanwendung3.jpg)
+
+
+###<a name="fba"></a> Stundenplanansicht
+
+
+####Funktionsbeschreibung
+
+
+Die Funktion Stundenplansicht ermöglicht es die Veranstaltungszeiten von Sitzungen zu verändern. Hierfür können die Sitzungen innerhalb der Übersicht einfach in die gewünschten Zeitslots verschoben werden. Zu jeder Sitzung werden der Kurs und das Modul zu dem die Sitzung gehört angegeben.
+
+Weiterhin kann die Studierbarkeit der einzelnen Studiengänge überprüft werden. Hierdurch wird nach der Verschiebung eines Kurses kontrolliert , ob es zu Überschneidungen in den betroffenen Studiengängen kommt. Ensprechende Überschneidungen werden daraufhin angezeigt.
+
+Zur einfacheren Bedienung ist zusätzlich noch ein Filter vorhanden mit dem die Sitzungen aufgefächert und segmentiert werden können.
+
+
+#### Filtern der Kurse
+
+
+Auf der linken Seite der Funktion können die einzelnen Kurse, die an der Fakultät angeboten werden, gefiltert werden.In der oberen Hälfte sind die Studiengänge, unterteilt nach Bachelor und Master, aufgelistet  und in der unteren Hälfte die einzelnen Kurse. 
+
+
+####Verschiebung von Sitzungen
+
+
+1. Zu verschiebende Sitzung in der Stundenplanansicht raussuchen.
+
+2. Linksklick auf die Sitzung und linke Maustaste gedrückt halten.
+
+3. Sitzung in den gewünschten Zeitslot schieben und linke Maustaste währenddessen gedrückt lassen.
+
+4. Linke Maustaste loslassen.
+
+Nun wird die Sitzung in den entsprechenden Zeitslot verschoben.
+
+**Hinweis:** Es sind nur Verschiebungen innerhalb eines Semesters möglich.
+
+
+####Überprüfung der Studierbarkeit und Bestimmung von Konflikten
+
+
+1. Klick auf das Feld `Check` im linken oberen Abschnitt der Funktion.
+
+2. Auswählen des zu überprüfenden Studiengangs oder Faches. 
+
+3. Klick auf den Button `Prüfe Erfüllbarkeit`.
+
+Nun wird die Studierbarkeit des gewählten Studienganges berechnet.
+
+
+![](stundenplanansicht.jpg)
+
+
+Bei Studiengängen die Aufgrund von Konflikten nicht Studierbar sind, können nun die Konfliktsitzungen berechnet werden.
+
+1. Auswählen der Funktion `Konflikt Bestimmen`. 
+
+2. Klick auf den Button `Los`.
+
+Die Konfliktsitzungen des Studieganges werden daraufhin berechnet und angezeigt. Diese können durch Klick auf den Button `Konflikte hervorheben` in der Stundenplanansicht markiert werden.
+
+
+![](stundenplanansicht2.jpg)
+
+
+####Weitere Funktionen
+
+
+##### Stundenplanansicht ändern
+
+
+Durch die Funktion `Ansicht` in der oberen Leiste kann gewählt werden ob in der Stundenplanansicht die `Unit Title`, die `UnitID/Gruppen` oder die `abstrakten Unit Schlüssel` angezeigt werden. Für nähere Informationen [hier](#fdc) klicken.
+
+
+#####Änderungen speichern
+
+
+Veranstaltungsverschiebungen die Mithilfe der Stundenplanansicht vorgenommen wurden können mithilfe der Funktionen `Speichern` und `Speichern unter`, welche in der obersten Leiste unter dem Feld `Datei`aufgerufen werden können, gespeichert werden. Für nähere Informationen klicken sie [hier](#fcb).
+
+
+### <a name="fbb"></a>PDF-Studienpläne
+
+
+####Funktionsbeschreibung
+
+
+Die Funktion PDF-Studienpläne berechnet Studienverlaufspläne von ausgewählten Fächerkombinationen. Hierdurch kann die Studierbarkeit einzelner Fächerkombinationen leicht überprüft werden. Des Weiteren beinhaltet der Studienverlaufsplan mögliche Stundenpläne für die einzelnen Semester und bietet damit eine detailierte Übersicht des Studienganges.
+
+
+#### Bedienung
+
+
+1. Auswahl der zu überprüfenden Fächerkombination (Haupt-und Nebenfach).
+
+2. Generieren des Studienverlaufsplans durch Klick auf den Button `Generieren`.
+
+Nun berechnet das Programm den Studienverlaufsplan für die ausgewählte Fächerkombination. Dies sollte nur einen kurzen Moment dauern. 
+
+
+#####1. Fall: Fächerkombination ist studierbar 
+
+
+Es erscheint ein grüner Kasten mit einem Haken.   
+Nun gibt es drei Möglichkeiten:  
+
+1. Anzeigen des Studienverlaufsplans.
+
+2. Speichern des Studienverlaufsplans.
+
+3. Entfernen des Studienverlaufsplans.
+
+Hierfür klickt man auf das Feld `Anzeigen` und wählt die entsprechende Funktion aus. Bestätigt wird die Auswahl durch einen Klick auf das Feld `Los`.
+
+
+#####2. Fall: Fächerkombination ist nicht studierbar
+
+
+Es erscheint ein roter Kasten mit einem Kreuz. Dieser kann durch einen Klick auf den Button `Los` wieder entfernt werden.
+
+
+![](pdfstudienplaene.jpg)
+
+
+### <a name="fbc"></a>Partielle Studienpläne
+
+
+#### Funktionsbeschreibung
+
+
+Die Funktion Partielle Studienpläne ermöglicht eine **Berücksichtigung konkreter Module und Kurse** bei der Erstellung eines Studienverlaufsplanes. Es können Studienverlaufspläne für verschiedene Fächerkombinationen berechnet werden. Hierbei ist es möglich einzelne Module und Kurse auszuwählen, die im Studienverlaufsplan enthalten sein sollen. Dadurch kann geprüft werden, ob eine bestimmte Fächerkombination studierbar ist, unter der Voraussetzung, dass sie bestimmte Veranstaltungen beinhaltet. 
+
+
+#### Bedienung
+
+
+1. Auswahl der zu überprüfenden Fächerkombination (Haupt- und Nebenfach).
+
+2. Klick auf das Feld `Wähle Module/Units`.
+
+3. Ankreuzen der zu berücksichtigen Module und Kurse.
+
+4. Starten der Berechnung durch Klick auf das Feld `Check`.
+
+Sollte die ausgewählte Kombination studierbar sein erscheint unter dem Feld `check` ein grüner Kasten mit einem Haken. Nun hat man zwei Möglichkeiten:
+
+1. Anzeigen des Studienverlaufsplanes durch Klick auf das Feld `Anzeigen`.
+
+2. Speichern des Studienverlaufsplanes durch Klick auf das Feld `Speichern`.
+
+
+
+![](partiell.studienplan.jpg)
+
+
+
+Sollte statt dem grünen Kasten ein roter Kasten mit einem Kreuz erscheinen, so ist die gewählte Fächerkombination, unter Berücksichtigung der ausgewählten Module und Kurse, nicht studierbar.
+
+
+![](partiell.studienplan2.jpg)
+
+
+### <a name="fbd"></a>Stapel-Stundenpläne
+
+
+#### Funktionsbeschreibung
+
+
+Unter der Funktion Stapel-Stundenpläne werden die Studienverlaufspläne aller  möglichen Fächerkombinationen an der Fakultät mit einem Klick berechnet.
+Die berechneten Studienverlaufspläne könnnen daraufhin als PDF und/oder Zip-Datei auf dem Computer gespeichert werden. 
+Die Funktion ermöglicht es schnell und unkompliziert eine umfassende Übersicht, in Form der einzelnen Stundenpläne für jedes Semester, über alle Studiengänge der Fakultät zu erhalten.
+
+
+#### Bedienung  
+
+
+1. Klick auf das Feld `Erzeuge alle PDFs`.
+
+Das Tool berechnet nun die Studienverlaufspläne aller Fächerkombinationen an der Fakultät. Dies kann einige Zeit dauern.
+
+Nach dem Berechnen können die Studiengänge auf dem Computer gespeichert werden.
+
+1. Speichern der Studienverlaufspläne als PDF durch Klick auf das Feld `In Ordner exportieren`.
+
+2. Speichern der Studienverlaufspläne als Zip-Datei durch Klick auf das Feld `Zip-Datei exportieren`. 
+
+
+![](stapel.stundenplan.jpg)
+
+
+
+### <a name="fbe"></a>Konfliktmatrix
+
+
+#####Funktionsbeschreibung
+
+
+Unter der Funktion Konfliktmatrix werden alle vorhandenen Studiengänge graphisch in Form einer Matrix dargestellt.  Sie bietet einen Überblick über die Studierbarkeit aller Studiengänge einer Fakultät. 
+
+
+
+##### Ansicht
+
+
+Die Ansicht ist unterteilt in Kombinierbare Studiengänge, alleinstehende Studiengänge und einzelne Studiengänge. Kombinierbare Studiengänge bestehen aus Haupt- und Nebenfach. Bei alleinstehenden Studiengängen handelt es sich um integrierte Studiengänge die ohne die Wahl eines weiteren Fachs studierbar sind. Unter der Kategorie einzelne Studiengänge sind alle Fächer einer Fakultät, also sowohl integrierte Studiengänge als auch Haupt- und Nebenfächer aufgelistet.
+
+Des Weiteren ist im Oberen Abschnitt eine Übersicht gegeben in der die Gesamtanzahl aller Erfüllbaren Studiengänge, nicht erfüllbaren Studiengänge und Zeitüberschreitungen bei der Berechnung von Studiengängen. 
+
+
+#####Bedienung
+
+
+1. Klick auf das Feld `Prüfe alle Kombinationen`.
+
+Nun wird die Studierbarkeit aller Studiengänge überprüft. Hierzu zählen sowohl Kombinierbare Studiengänge, sowie alleinstehende und einzelne Studiengänge.
+
+
+
+#####Bedeutung der Farben:
+
+
+**grün (1 Punkt):** Studiengang ist studierbar.
+
+**rot (2 Punkte):** Studiengang ist nicht studierbar (Es treten Konflikte/Überschneidungen zwischen Haupt- und Nebenfach auf).
+
+**gelb (3 Punkte):** Das Zeitlimit bei der Berechnung des Studienganges wurde überschnitten. Die Zeitgrenzen können individuell angepasst werden (siehe [Setze Timeout](#fdb)).
+
+**rot (4 Punkte):** Studiengang ist generell nicht studierbar. Grund für die Nichtstudierbarkeit ist hierbei nicht ein Konflikt zwischen Haupt- und Nebenfach, sondern eine generelle Nichtstudierbarkeit eines Teils des Studienganges. (siehe [Unmögliche Studiengänge](#xa))
+
+**grau (5 Punkte):** Die Kombination ist aufgrund des selben Haupt- und Nebenfaches nicht studierbar (Gleiches Haupt- und Nebenfach wurde ausgewählt).
+ 
+**weiß**: Weiße Felder bedeuten, dass die Studierbarkeit des relevanten Studienganges noch nicht berechnet wurde. Sollte eine Berechnung manuell abgebrochen werden, bleibt das Feld ebenfalls weiß
+
+
+### <a name="fbf"></a> Konfliktsuche
+
+
+####Funktionsbeschreibung
+
+
+Mit der Funktion Schrittweise Konfliktsuche werden zeitliche Konflikte innerhalb eines Studienganges berechnet. Bei der Berechnung dieser Konflikte geht das Programm schrittweise vor, um so die zeitlichen Konflikte in jeder Gliederungsebene angeben zu können. Als erstes werden die betroffenen Konfliktmodule berechnet. Um die Konflikte präziser darzustellen, können nun die betroffenen Kurse und als letzter Schritt die konkreten Gruppen berechnet werden. 
+
+Es werden sowohl zetiliche Konflikte zwischen Modulen innerhalb eines Faches berechnet, als auch Konfikte zwischen Modulen des Haupt- und Nebenfachs eines Studienganges berechnet. 
+
+
+####Bedienung
+Zur Berechnung der zeitlichen Konflikte eines Studienganges wird wie folgt vorgegangen:
+
+##### 1. Konfliktmodule berechnen
+
+1. Klick auf den Button `Konfliktmodule berechnen`.
+
+Nun werden alle Module bei denen es zu Überschneidungen kommt angezeigt. Neben der PordNr und den Namne des Moduls wird zusätlich noch angegeben ob es sich um ein Pflichtmodul handelt (Kreuz bedeutet Pflichtmodul).
+
+
+![](konfliktsuche.jpg)
+
+
+##### 2. Konfliktkurse berechnen
+
+1. Klick auf den Button `Konflikt-Abstrakte-Lehrveranstaltungen Berechnen`.
+
+Nun werden die konkreten Kurse der Konfliktmodule angezeigt die für die Überschneidung verantwortlich sind. Es wird sowohl die Abkürzung des Kurses, sein Titel, das Semester in dem er stattfindet, sowie eine Angabe ob es sich um einen Wahl- oder Pflichtkurs für das Modul handelt, angegeben.
+
+
+![](konfliktsuche2.jpg)
+##### 3. Konfliktgruppen berechnen
+
+1. Klick auf den Button `Konflikt-Lehrveranstaltungen und Gruppen Berechnen`.
+
+Nun werden die konkreten Gruppen angezeigt die im Konflikt zueinander stehen. Neben dem **Titel**, der **Abkürzung** und der **ID** der Gruppe werden auch Informationen zur genauen **Uhrzeit** und den **Semestern** in denen die Gruppe stattfindet angegeben. 
+
+
+![](konfliktsuche3.jpg)
+
+##### 4. Konflikt-Sitzungen
+
+1. Klick auf den Button `Konflikt-Sitzungen Berechnen`
+
+
+## 2.3 <a name="fc"></a> Weitere Funktionen
+
+
+Neben den Hauptfunktionen verfügt das Programm über weitere wichtige Funktionen. Diese können in der obersten Leiste unter den Feldern [Datei](#fda), [Bearbeiten](#fdb), [Ansicht](#fdc), [Fenster](#fdd) und [Hilfe](#fde) aufgerufen werden. 
+
+
+### <a name="fda"></a> Datei
+Das Feld Datei ist in folgende Funktionen unterteilt: 
+
+1. [Öffnen](#fca) 
+
+2. [Speichern/Speichern unter](#fcb)
+
+3. [Exportiere gespeicherten Stand](#fcc)
+
+4. [Änderungsprotokoll](#fcd)
+
+5. [Bericht](#fce)
+
+
+#### <a name="fca"></a> Öffnen
+
+
+#####Funktion
+
+
+Mit der Funktion `Öffnen` werden Datenbanken geöffnet und in das Programm eingelesen. Dies sollte dirket nach Start des Programms erfolgen, da das Tool erst nach dem Einlesen einer Datenbank voll funktionsfähig ist. Ist bereits eine Datenbank geöffnet, kann keine weitere mehr geöffnet werden.  
+
+
+#####Bedienung
+
+
+1. Klick auf das Feld `Datei` im oberen linken Teil der Startseite.
+
+2. Klick auf das Feld `Öffnen`. 
+
+3. Auswählen der zu öffnenden Datenbank.
+
+4. Auswahl bestätigen durch Klick auf das Feld `Öffnen`.
+
+Nach dem Öffnen der Datenbank beginnt das Programm mit dem Einlesen der Daten. 
+
+
+#### <a name="fcb"></a> Speichern/Speichern unter
+
+
+Um vorgenommene Änderungen zu speichern werden die Funktionen `Speichern` und  `Speichern unter` verwendet. Beide Funktionen sind unter dem Feld `Datei` in der obersten Leiste des Tools aufrufbar.
+
+Die Speichern Funktion speichert die Änderungen in der aktuell geöffneten SQlite-Datenbank. Hierfür gennügt ein Klick auf das Feld `Speichern`
+
+Durch das Benutzen der Speichern unter Funktion wird eine neue SQlite-Datenbank erstellt in der vorgenommene Änderungen abgespeichert werden. Hierfür muss man nach einem Klick auf das Feld `Speichern unter` noch den Speicherort und den Namen der neuen Datenbank auswählen und dies mit einem Klick auf den Button `Speichern` bestätigen.
+
+Die aktuell geöffnete Datenbank wird hierbei nicht überschrieben sondern verbleibt auf dem Stand, zu dem sie geöffnet wurde. 
+
+
+#### <a name="fcc"></a>Exportieren von Speicherständen
+
+
+Die Funktion `Exportiere gespeicherten Stand` erstellt auf Basis der verwendeten SQlite-Datenbank neue Modulbaum und Moduldaten XML-Dokumente, welche als Zip-Datei abgespeichert werden können. 
+
+Hierfür muss man nach einem Klick auf das Feld `Exportiere gespeicherten Stand` noch den Speicherort und den Namen der neuen Datenbank auswählen und dies mit einem Klick auf den Button `Speichern` bestätigen. Um auf die Modulbaum und Moduldaten XML-Dokumente zugreifen zu können muss die erstellte Zip-Datei nun nur noch entpackt werden.
+
+**Wichtig:** Etwaige Änderungen die mit Hilfe der Stundenplanansicht vorgenommen wurden, sind in diesen XML-Dokumenten enthalten.
+ 
+
+### <a name="fcd"></a> Änderungsprotokoll
+
+
+####Funktionsbeschreibung
+
+
+Im Änderungsprotokoll werden die Verschiebungen von einzelnen Veranstaltungen notiert und gespeichert. Das Ziel ist es eine Übersicht über alle verschobenen Veranstaltungen zu erhalten, um so ein problemloses Arbeiten zu gewährleisten. 
+
+Hierbei unterscheidet das Änderungsprotokoll zwischen temporären und persistenten Einträgen. Bei temporären Einträgen handelt es sich um Verschiebungen, welche noch nicht abgespeichert wurden und somit noch veränderbar sind. Persistente Einträge wurden bereits gespeichert und können nur durch eine erneute Verschiebung wieder verändert werden.
+
+Das Änderungsprotokoll enthält neben den Namen der verschobenen Veranstaltungen auch Informationen über die betroffenen Zeitslots, sowie das Datum und die Uhrzeit an dem die Änderung vorgenommen wurde.
+
+
+####Übersicht
+
+
+![](aenderungsprotokoll3.jpg)
+
+
+ Unter den temporären Änderungen befinden sich alle aktuell durchgeführten Anpassungen. Ein temporärer Eintrag wird erst zu einem persistenten Eintrag wenn die Änderungen gespeichert wurden und die neuentstandene SQlite-Datenbank mit dem Programm geöffnet wurde. Das Speichern erfolgt durch die Funktionen [Speichern](#ww) oder [Speichern unter](#ww).
+
+
+### <a name="fce"></a> Bericht
+
+
+####Allgemeine Beschreibung
+
+
+Neben dem Änderungsprotokoll bietet das Planungswerkzeug für überschneidungsfreies Studieren ebenfalls die Möglichkeit sich einen Bericht anzeigen zu lassen. In diesem sind verschiedene Funktionen aufgelistet die bei der korrekten Erstellung der XML-Dokumente behilflich sein sollen. Des Weiteren beinhaltet er eine Gesamtstatistik der geöffneten Datenbank, in der z.B. die Anzahl der Studiengänge oder die Gesamtanzahl aller Gruppen aufgelistet ist. Diese ist im oberen Abschnitt der Funktion abgebildet.
+
+Durch einen Klick auf den Button `Druckversion` im oberen linken Abschnitt ist es möglich eine PDF-Version des Berichtes zu erstellen, welche ausgedruckt werden kann.
+
+
+####Umfang und Kategorien
+
+
+Der Bericht ist in zehn einzelne Kategorien gegliedert:
+
+1. [Unmögliche Module](#xa)
+ 
+2. [Unmögliche Studiengänge](#xb)
+
+3. [Abstrakte Lehrveranstaltungen ohne konkrete Lehrveranstaltungen](#xc)
+
+4. [Lehrveranstaltungen ohne konkrete Lehrveranstaltungen](#xd)
+
+5. [Abstrakte Lehrveranstaltungen mit konkreter Ausprägung in unterschiedlichen Semestern](#xe)
+
+6. [Pflichtmodule und Quasi-Pflichtmodule pro Studiengang](#xf)
+
+7. [Quasi-Pflicht abstrakte Lehrveranstaltungen pro Modul](#xg)
+
+8. [Lehrveranstaltungen mit redundanten Gruppen](#xh)
+
+9. [Unmögliche Studiengänge mit fehlenden Lehrveranstaltungs-Informationen](#xi)
+
+10. [Unmögliche Studiengänge mit konfliktierenden abstrakten Lehrveranstaltungen](#xj) 
+
+
+#### <a name="xa"></a> 1. Unmögliche Module
+
+
+In der Kategorie `Unmögliche Module` sind alle Module aufgelistet, bei denen eine ordnungsgemäße Belegung nicht möglich ist und die daher bei der Berechnung der Studienpläne nicht berücksichtigt werden. Hierbei wird zwischen zwei Unterkategorien unterschieden:
+
+#####1. Unvollständige Module
+
+Hier sind alle Module aufgelistet bei denen relevante Informationen noch nicht eingetragen wurden und die daher nicht belegt werden können. Um dies zu beheben müssen die aufgelisteten Module auf ihre Vollständigkeit hin untersucht werden und unvollständige Informationen nachgetragen werden.
+
+#####2. Fehlende frei wählbare abstrakte Lehrveranstaltungen
+
+Hier aufgelistete Module enthalten weniger Wahlpflichtveranstaltungen als gefordert. Dies bedeutet, dass in der [Kursgliederung](#bc) des Dokuments Moduldaten unter dem Eintrag `elective-units` mehr Wahlpflichtmodule gefordert werden, als bisher eingetragen wurden. Um dies zu beheben müssen entweder neue Wahlpflichtmodule hinzugefügt werden, oder der Eintrag unter `elective-units` muss verringert werden.
+
+  
+#### <a name="xb"></a> 2.Unmögliche Studiengänge
+
+
+In der Kategorie `Unmögliche Studiengänge` sind alle Studiengänge aufgelistet die grundsätzlich nicht studierbar sind. Der Grund für die nicht Studierbarkeit des Studienganges ist hierbei nicht die Überschneidung von Veranstaltungen, sondern eine generelle nicht Studierbarkeit. Es wird nach drei Kategorien unterschieden.
+
+
+##### 1. Fehlende Daten
+
+
+Studiengänge die hier aufgelistet sind wurden nur unvollständig in die XML-Dokumente eingetragen und sind daher nicht studierbar.
+
+
+##### 2. Unmögliche Module 
+
+
+Hier abgebildete Studiengänge enthalten unmögliche Pflicht- und/oder Quasi-Pflicht Module und sind daher nicht studierbar (siehe [Unmögliche Module](#xa)).  
+
+
+##### 3. Unmögliche Modulkombinationen
+
+  
+Die hier aufgelisteten Studiengänge sind nicht studierbar, da alle Kombinationen von Wahlmodulen unmögliche Module enthalten. 
+
+
+##### <a name="xc"></a> 3.Abstrakte Lehrveranstaltungen ohne konkrete Lehrveranstaltungen
+
+
+Die Kategorie `Abstrakte Lehrveranstaltungen ohne konkrete Lehrveranstaltungen` beinhaltet alle Kurse, die in der [Kursgliederung](#bc) des Dokuments Moduldaten aufgelistet sind, denen aber keine konkreten Veranstaltungen im [Veranstaltungsverzeichnis](#bd) des Dokuments Moduldaten zugeordnet sind. 
+
+
+Es gibt meist zwei Ursachen für dieses Problem:
+
+1. Die IDs des Kurses in der Kursgliederung oder der Veranstaltung im Veranstaltungsverzeichnis wurden fehlerhaft eingetragen, weshalb die IDs voneinander abweichen und somit keine Zuordnung stattfinden kann.
+
+2.  Es wurde keine konkrete Veranstaltung im Veranstaltungsverzeichnis eingetragen, da z.B. die Termine noch nicht bekannt sind, oder die Veranstaltung aktuell nicht stattfindet.
+
+Beide Fälle führen dazu, dass der Kurs bei der Überprüfung der Studierbarkeit und der Berechnung des Studienverlaufsplans nicht berücksichtigt wird. Dies kann zur fehlerhaften Berechnung des Studienplanes oder zur nicht Studierbarkeit des Studienganges führen.
+
+Daher ist es wichtig etwaige Eintragungsfehler zu berichtigen und fehlende Daten schnellstmöglich nachzutragen, um so Fehler zu vermeiden. 
+
+
+##### <a name="xd"></a> 4. Lehrveranstaltungen ohne konkrete Lehrveranstaltungen
+
+
+In dieser Kategorie sind alle konkreten Lehrveranstaltungen eingetragen die zu keiner abstrakten Lehrveranstaltung gehören. Dies bedeutet, dass eine Veranstaltung ins [Veranstaltungsverzeichnis](#bd) der Datei Moduldaten eingetragen wurde, deren `abstract-unit` aber zu keinem Kurs aus der [Kursgliederung](#bc) passt.
+
+Ein möglicher Grund hierfür könnte ein Tippfehler oder eine falsche Eintragung in der `abstract-unit` sein. Eine Weitere Möglichkeit ist, dass die Veranstaltung beim Löschen des Kurses übersehen wurde und daher noch vorhanden ist. 
+Sollte es sich um eine korrekte Veranstaltung handeln, der kein Kurs in der [Kursgliederung](#bc) zugeordnet ist, so ist dieser nachzutragen. 
+
+
+##### <a name="xe"></a> 5. Abstrakte Lehrveranstaltungen mit konkreter Ausprägung in unterschiedlichen Semestern
+
+
+Unter dieser Kategorie sind alle Kurse aufgelistet bei denen die Semestereintragungen in der [Kursgliederung](#bc) und im [Veranstaltungsverzeichnis](#bd) des Dokuments Moduldaten voneinander abweichen. Sollte dies der Fall sein liegt ein Eintragungsfehler vor, welcher berichtigt werden sollte.
+
+Hierfür vergleicht man die Semestereintragungen des Kurses in der Kursgliederung und der konkreten Veranstaltung im Veranstaltungsverzeichnis mit den tatsächlichen Zeiten und berichtigt die Abweichungen.
+
+Abweichende Semestereintragungen führen dazu, dass ein Kurs und damit meist das gesamte Modul bei der Überprüfung der Studierbarkeit und der Erstellung eines Studienverlaufsplanes des Studienganges nicht berücksichtigt wird. Hierdurch kann es vorkommen, dass Fächerkombinationen als nicht studierbar angezeigt werden, obwohl sie es eigentlich sind.
+
+
+##### <a name="xf"></a> 6. Pflichmodule und Quasi-Pflichtmodule pro Studiengang
+
+
+Die Kategorie Pflichtmodule und Quasi-Pflichtmodule pro Studiengang umfasst alle Studiengänge die zum Abschließen eines Studienganges belegt werden müssen. 
+
+**Pflichtmodule:** Module eines Studienganges die laut Prüfungsordnung zwingend belegt werden müssen. 
+
+**Quasi-Pflichtmodule:** Wahlmodule eines Studienganges, die für das Abschließen des speziellen Studienganges zwingend belegt werden müssen(z.B. entsprechende Wahlmodule bei Bildung eines Schwerpunktes).
+
+Im oberen Abschnitt könnnen die einzelnen Studiengänge ausgewählt werden, woraufhin im unteren Abschnitt die Pflicht- und Quasi-Pflichtmodule des ausgewählten Studienganges angezeigt werden.
+
+
+![](bericht2.jpg)
+
+
+##### <a name="xg"></a> 7. Quasi-Pflicht abstrakte Lehrveranstaltungen pro Modul
+
+
+In dieser Kategorie sind alle Kurse eines Moduls aufgelistet, die zum erfolgreichen Bestehen des Moduls unbedingt belegt werden müssen.
+
+Im oberen Abschnitt können die entsprechenden Module ausgewählt werden, woraufhin im unteren Abschnitt die Quasi-Pflicht abstrakten Lehrveranstaltungen des Moduls angezeigt werden.
+
+
+##### <a name="xh"></a> 8. Lehrveranstaltungen mit redundanten Gruppen
+
+
+Unter der Kategorie Lehrveranstaltungen mit redundanten Gruppen sind Lehrveranstaltungen aufgelistet die zwei oder mehrere Gruppen enthalten, bei denen alle zeitlichen Eintragungen gleich sind.
+Dies bedeutet, dass diese Gruppen mehrfach eingetragen wurden.
+
+Um dies zu berichtigen muss man die aufgelistete Veranstaltung im [Veranstaltungsverzeichnis](#bd) suchen und entsprechende doppelte Gruppeneintragungen löschen. 
+
+
+![](bericht3.jpg)
+
+
+##### <a name="xi"></a> 9. Unmögliche Studiengänge mit fehlenden Lehrveranstaltungs-Informationen
+
+
+In dieser Kategorie sind die Studiengänge aufgelistet, die Aufgrund fehlender konkreter Lehrveranstaltungen ([siehe Kategorie 3](#xc)) nicht studierbar sind. Bei den Kursen mit den fehlenden Lehrveranstaltungen handelt es sich hierbei um verpflichtende Kurse eines Pflicht- oder Quasi-Pflichtmoduls. 
+
+Um dies zu Berichtigen und eine Studierbarkeit des Studienganges zu ermöglichen, müssen die fehlenden Lehrveranstaltungen in das [Veranstaltungsverzeichnis](#bd) des Dokuments Moduldaten nachgetragen werden.
+
+
+##### <a name="xj"></a> 10. Unmögliche Studiengänge mit konfliktierenden abstrakten Lehrveranstaltungen 
+
+
+Die in dieser Kategorie aufgelisteten Studiengänge enthalten zwei oder mehrere(Quasi-)Pflichtmodule, welche beide den selben Kurs beinhalten. Dadurch kann immer nur eins dieser Module belegt werden und der Studiengang wird nicht studierbar.
+
+
+### <a name="fdb"></a> Bearbeiten
+
+
+####Wähle Timeout
+
+
+Die Funktion `Wähle Timeout` ist unter dem Punkt `Bearbeiten` in der obersten Zeile aufrufbar. Mit ihr wird das Zeitlimit festgelegt, mit der das Programm die Studierbarkeit von Studiengängen berechnet. Die Standartdauer ist hierbei  auf eine Minute festgelegt. Sollte ein Studiengang nicht in einer Minute berechnet werden können, lässt sich die Dauer mit dieser Funktion anpassen.
+
+Nach einem Klick auf das Feld `Wähle Timeout` hat man die Wahl zwischen Zeitlimits von einer Minute, drei Minuten, fünf Minuten oder einem selbst festgelegten Wert. Um ein individuelles Limit einzustellen klickt man auf das Feld `Setze Timeout`.
+
+**Hinweis:** Selbst festgelegte Zeilimits werden in Sekunden eingegeben. 
+
+
+### <a name="fdc"></a> Ansicht
+
+
+####Stundenplan
+
+
+Die Funktion `Stundenplan` ist in der obersten Zeile unter dem Punkt `Ansicht` aufrufbar. Mit ihr wird die Darstellung der Kurse in der Funktion [Stundenplanansicht](#fba) ausgewählt. Man hat die Wahl zwischen drei Möglichkeiten:
+
+
+#####1. Unit Title:
+
+
+Angezeigt werden die Namen der der Veranstaltung, z.B. Einführung in die Finanzbuchführung oder Logik 1 (Unit ID und Gruppen ID in Klammern dahinter).
+
+
+#####2. Unit ID/Gruppen ID:
+
+
+**Unit ID**= ID die der Gruppe in dem Moduldaten XML-Dokument zugeordnet ist.  
+**Gruppen ID**= konkrete Zahl ohne weitere inhaltliche Relevanz, dient der Zuordnung
+
+
+#####3. Abstrakte Unit Schlüssel:
+
+
+Angezeigt werden die `abstract-units` aus dem Moduldaten XML-Dokument. Hierbei handelt es sich um die offiziellen Abkürzungen der Kurse.
+
+
+### <a name="fde"></a> Hilfe
+
+
+####Über
+
+
+Die Funktion `Über` ist unter dem Punkt `Hilfe` aufrufbar. Hier werden Informationen über die Entwickler und Beteiligten angezeigt.
+
+
+####Handbuch 
+
+
+Mit der Funktion `Handbuch Anzeigen` wird das Handbuch zum Planungswerkzeug für Überschneidungsfreies Studieren aufgerufen.
+
+
+#3.Anwendungsmöglichkeiten
+
+### <a name="wa"></a>3.1 Anwendungsmöglichkeiten der Hauptanwendung
+
+
+####Verschieben von Veranstaltungen
+
+
+Um einzelne Veranstaltungen schnell zu verschieben wird die Funktion [Stundenplanansicht](#fba) verwendet.
+
+
+#### Berechnung von Studienverlaufsplänen 
+
+
+#####Einzelner Studiengänge
+
+
+Um den Studienverlaufsplan eines einzelnen Studienganges zu überprüfen wird die Funktion [PDF-Studienpläne](#fbb) verwendet.
+
+
+##### Einzelner Studiengänge mit Berücksichtigung spezieller Module 
+
+
+Die Funktion [Partielle Studienpläne](#fbc) berechnet Studienverlaufspläne unter der Berücksichtigung spezieller Module.
+
+
+#####Aller Studiengänge
+
+
+Um die Studienverlaufspläne aller Studiengänge der Fakultät zu berechnen wird die Funktion [Stapel-Stundenpläne](#fbd) verwendet.
+
+
+####Kontrollieren der Studierbarkeit
+
+
+Mit der Funktion [Konfliktmatrix](#fbe) kann die Studierbarkeit aller Studiengänge einer Fakultät kontrolliert werden.
+
+
+####Anzeigen von zeitlichen Überschneidungen
+
+
+Zeitliche Überschneidungen von Veranstaltungen innerhalb eines Studienganges  können mit der Funktion  [Konflikt-Suche](#fbf) berechnet werden.
+
+
+####<a name="wb"></a> 3.2 Anpassung von Studienganginformationen
+
+
+#####Erstellen neuer Daten 
+
+Um neue Studiengänge, Module, Kurse oder Gruppen zu erstellen, müssen die XML-Dokumente Modulbaum und Moduldaten verändert werden. Siehe hierfür [Kapitel 5](#c).
+
+
+####Anpassung bei bereits bestehenden Veranstaltungen
+
+
+Um Informationen bereits bestehender Veranstaltungen anzupassen, müssen die XML-Dokumente Modulbaum und Moduldaten angepasst werden. Siehe hierfür [Kapitel 6](#d).
+
+
+## <a name="b"></a>4. Beschreibung und Aufbau der XML-Dokumente
+
+
+###4.1 Übersicht und allgemeine Hinweise
 
 
 #### <a name="ba"></a>Übersicht
@@ -115,7 +816,7 @@ Des Weiteren ist zu beachten das **alle** inhaltlichen Daten in **Anführungszei
 Außerdem beginnt **jede** Zeile mit einem **kleiner als(<)** und endet mit einem **größer als(>)**. 
  
 
-### <a name="bb"></a>2.2 Modulbaum
+### <a name="bb"></a>4.2 Modulbaum
 
 
 Das XML-Dokument Modulbaum bietet eine erste Übersicht über die verfügbaren Module. Das Hauptelement ist die jeweilige **Fakultät(1)**, dargestellt durch den `Modulbaum`-Knoten. Dieser ist gegliedert in die einzelnen **Studiengänge(2)**.(Wirtschaftschemie Bachelor, Master...), welche wiederum in die **Wahl- und Pflichtmodule(3)** des entsprechenden Studiengangs unterteilt sind. Als unterste Gliederungsebene werden die einzelnen **Module(4)** aufgeführt.
@@ -196,7 +897,7 @@ Ende: **`/>`**
 ![](start-ende,modulbaum.jpg)
 
 
-### <a name="bc"></a>2.3 Moduldaten Kursgliederung (1.Hälfte)
+### <a name="bc"></a>4.3 Moduldaten Kursgliederung (1.Hälfte)
 
 
 ####Inhaltliche Gliederung:
@@ -256,7 +957,7 @@ Ende: **`/>`**
 ![](start-ende,moduldaten.jpg)
 
 
-### <a name="bd"></a>2.4 Moduldaten Veranstaltungsverzeichnis (2.Hälfte)
+### <a name="bd"></a>4.4 Moduldaten Veranstaltungsverzeichnis (2.Hälfte)
 
 
 ####Inhaltliche Gliederung
@@ -324,10 +1025,10 @@ Ende: **`/>`**
 
 
 
-### <a name="c"></a> 3. Eingabe neuer Daten  
+### <a name="c"></a> 5. Eingabe neuer Daten  
 
 
-#### <a name="ca"></a> 3.1 Erstellen neuer Studiengänge
+#### <a name="ca"></a> 5.1 Erstellen neuer Studiengänge
 
 
 Bei dem Erstellen neuer Studiengänge müssen beide Dokumente, Modulbaum und Moduldaten, angepasst werden.
@@ -425,7 +1126,7 @@ Nachdem alle Gruppen eingetragen wurden, wird der Kurs mit dem Ausdruck `</unit>
 **Hinweis:** Die beiden Ausdrücke `</units>` und `</data>` müssen weiterhin am Ende des Dokuments stehen.
  
 
-#### <a name="cb"></a> 3.2 Erstellen neuer Module 
+#### <a name="cb"></a> 5.2 Erstellen neuer Module 
 
 
 Bei der Erstellung neuer Module müssen beide XML-Dokumente, Modulbaum und Moduldaten, angepasst werden.
@@ -459,7 +1160,7 @@ Der [Anleitung](anl1) für die Eintragung im Kursverzeichnis aus Abschnitt 3.1.1
 Der [Anleitung](#anl2) für die Eintragung der Veranstaltungszeiten aus Abschnitt 3.1.1 ist zu folgen.
 
 
-#### <a name="cc"></a> 3.3 Erstellen neuer Kurse
+#### <a name="cc"></a> 5.3 Erstellen neuer Kurse
 
 
 Für das Erstellen neuer Kurse ist nur das Dokument Moduldaten relevant.
@@ -488,10 +1189,10 @@ Für das Erstellen neuer Kurse ist nur das Dokument Moduldaten relevant.
 Der [Anleitung](#anl2) für die Eintragung der Veranstaltungszeiten aus Abschnitt 3.1.1 ist zu folgen.
 
 
-### <a name="d"></a> 4. Änderungen bei bereits bestehenden Veranstaltungen
+### <a name="d"></a> 6. Änderungen bei bereits bestehenden Veranstaltungen
 
 
-#### <a name="da"></a> 4.1 Namensänderung von Modulen und Kursen
+#### <a name="da"></a> 6.1 Namensänderung von Modulen und Kursen
 
 
 #####Module
@@ -544,7 +1245,7 @@ Bei der Namensänderung von Kursen muss die Datei Moduldaten angepasst werden.
 ![](anleitung12.jpg)
 
 
-#### <a name="db"></a> 4.2 Anpassung von Studienganginformationen
+#### <a name="db"></a> 6.2 Anpassung von Studienganginformationen
 
 
 Anpassungen die sich direkt auf die Studiengänge beziehen werden in der Datei Modulbaum vorgenommen.  
@@ -556,7 +1257,7 @@ Anpassungen die sich direkt auf die Studiengänge beziehen werden in der Datei M
 3. Angepasst werden können die Felder `cp=""_, _abschl=""_, _stg=""_, _kzfa=""_, _pversion=""_, und _name=""` (Bedeutung siehe [Abkürzungsverzeichnis](#abkmb)).
 
 
-#### <a name="dc"></a> 4.3 Anpassung von Credit Points
+#### <a name="dc"></a> 6.3 Anpassung von Credit Points
 
 
 Die Anpassung von Credit Points erfolgt in der Datei Modulbaum, sowie in der Kursüberischt der Datei Moduldaten.  
@@ -592,7 +1293,7 @@ Die Anpassung von Credit Points erfolgt in der Datei Modulbaum, sowie in der Kur
 ![](anleitung8.jpg)
 
 
-#### <a name="dd"></a> 4.4 Änderung von Vorlesungs- und Übungszeiten
+#### <a name="dd"></a> 6.4 Änderung von Vorlesungs- und Übungszeiten
 
 
 Bei der reinen Änderung von Veranstaltungszeiten ist nur die zweite Hälfte des Dokuments Moduldaten von Relevanz.  
@@ -648,10 +1349,10 @@ Bei dem Erstellen einer neuen Gruppe wird wie folgt vorgegangen:
 (Grüne Markierung zeigt genau eine vollständige Gruppe)
 
 
-##5. Zusammenfügen der XML-Dokumente
+##7. Zusammenfügen der XML-Dokumente
 
 
-### <a name="ea"></a> 5.1 Zusammenfügen der XML-Dokumente
+### <a name="ea"></a> 7.1 Zusammenfügen der XML-Dokumente
 
 Um die eingegebenen Daten weiterverwenden zu können, müssen die beiden XML-Dateien Modulbaum und Moduldaten zu einer SQlite-Datei zusammengefügt werden. Hierfür wird die Das Program **mincer** benötigt, nach dem Öffnen der Datei wird folgender Bildschirm angezeigt:
 
@@ -668,387 +1369,18 @@ Nach einem Klick auf das Feld `Modul-Baum-Datei öffnen`, ist nun die Datei Modu
 Als letztes muss nun noch der Speicherort und der Name der neuen SQlite-Datenbank angegeben werden und das Erstellen der neuen Datenbank ist beendet.
 
 
-#6. Umgang mit der Hauptanwendung
 
 
-### <a name="fa"></a> 6.1 Starten der Hauptanwendung und Einlesen der Daten
 
 
-Die Hauptanwendung wird durch die Datei **plues-2.0.0-PREVIEW2** gestartet. Nach dem Starten erscheint folgender Bildschirm:
 
 
-![](hauptanwendung1.jpg)
 
 
+## 8. Häufig auftretende Fehler
 
-Als nächster Schritt muss die entsprechende Datenbank im Programm geöffnet werden. Hierfür wird wie folgt vorgegangen:
 
-1. Klick auf das Feld `Datei` im oberen linken Teil der Startseite.
-
-2. Klick auf das Feld `Öffnen`. 
-
-3. Auswählen der zu öffnenden Datenbank.
-
-4. Auswahl bestätigen durch Klick auf das Feld `Öffnen`.
-
-Nach dem Öffnen der Datenbank beginnt das Programm mit dem Einlesen der Daten. Angezeigt wird dies auf der rechten Seite des Bildschirms.
-
-
-![](hauptanwendung2.jpg)
-
-
-Das Einlesen kann je nach Größe der Datenbank einige Zeit in Anspruch nehmen. Nachdem die Datenbank eingelesen wurde können alle Funktionen des Tools genutzt werden.
-
-
-
-
-
-
-## <a name="fb"></a> 6.2 Hauptfunktionen
-
-
-###Übersicht
-
-
-Das Planungswerkzeug für überschneidungsfreies Studieren bietet verschiedene Funktionen, die die Arbeit mit Studienplänen vereinfachen und somit Überschneidungen verhindern sollen:
-
-1. [Stundenplanansicht](#fba)
-
-2. [PDF-Studienpläne](#fbb)
-
-3. [Partielle Studienpläne](#fbc)
-
-4. [Stapel-Stundenpläne](#fbd)
-
-5. [Konfliktmatrix](#fbe)
-
-6. Unsat Core
-
-Diese sind in im oberen Drittel der Startseite aufgelistet.
-
-
-![](hauptanwendung3.jpg)
-
-
-###<a name="fba"></a> Stundenplanansicht
-
-
-####Funktionsbeschreibung
-
-
-Die Funktion Stundenplansicht ermöglicht es die Veranstaltungszeiten von Kursen zu verändern. Hierfür können die Kurse innerhalb der Übersicht einfach in die gewünschten Zeitslots verschoben werden. Weiterhin ist es möglich die Studierbarkeit der einzelnen Studiengänge zu überprüfen. Hierdurch kann nach der Verschiebung eines Kurses sofort kontrolliert werden, ob es nun zu Überschneidungen in den betroffenen Studiengängen kommt. Sollte es zu Überschneidungen kommen, werden diese ebenfalls angezeigt.
-
-
-####Bedienung
-
-
-
-
-### <a name="fbb"></a>PDF-Studienpläne
-
-
-####Funktionsbeschreibung
-
-
-Die Funktion PDF-Studienpläne berechnet Studienverlaufspläne von ausgewählten Fächerkombinationen. Hierdurch kann die Studierbarkeit einzelner Fächerkombinationen leicht überprüft werden. Des Weiteren beinhaltet der Studienverlaufsplan mögliche Stundenpläne für die einzelnen Semester und bietet damit eine detailierte Übersicht des Studienganges.
-
-
-#### Bedienung
-
-
-1. Auswahl der zu überprüfenden Fächerkombination (Haupt-und Nebenfach).
-
-2. Generieren des Studienverlaufsplans durch Klick auf den Button `Generieren`.
-
-Nun berechnet das Programm den Studienverlaufsplan für die ausgewählte Fächerkombination. Dies sollte nur einen kurzen Moment dauern. 
-
-
-#####1. Fall: Fächerkombination ist studierbar 
-
-
-Es erscheint ein grüner Kasten mit einem Haken.   
-Nun gibt es drei Möglichkeiten:  
-
-1. Anzeigen des Studienverlaufsplans.
-
-2. Speichern des Studienverlaufsplans.
-
-3. Entfernen des Studienverlaufsplans.
-
-Hierfür klickt man auf das Feld `Anzeigen` und wählt die entsprechende Funktion aus. Bestätigt wird die Auswahl durch einen Klick auf das Feld `Los`.
-
-
-#####2. Fall: Fächerkombination ist nicht studierbar
-
-
-Es erscheint ein roter Kasten mit einem Kreuz. Dieser kann durch einen Klick auf den Button `Los` wieder entfernt werden.
-
-
-![](hauptanwendung6.jpg)
-
-
-### <a name="fbc"></a>Partielle Studienpläne
-
-
-#### Funktionsbeschreibung
-
-
-Die Funktion Partielle Studienpläne ermöglicht eine **Berücksichtigung konkreter Module und Kurse** bei der Erstellung eines Studienverlaufsplanes. Es können Studienverlaufspläne für verschiedene Fächerkombinationen berechnet werden. Hierbei ist es möglich einzelne Module und Kurse auszuwählen, die im Studienverlaufsplan enthalten sein sollen. Dadurch kann geprüft werden, ob eine bestimmte Fächerkombination studierbar ist, unter der Voraussetzung, dass sie bestimmte Veranstaltungen beinhaltet. 
-
-
-#### Bedienung
-
-
-1. Auswahl der zu überprüfenden Fächerkombination (Haupt- und Nebenfach).
-
-2. Klick auf das Feld `Wähle Module/Units`.
-
-3. Ankreuzen der zu berücksichtigen Module und Kurse.
-
-4. Starten der Berechnung durch Klick auf das Feld `Check`.
-
-Sollte die ausgewählte Kombination studierbar sein erscheint unter dem Feld `check` ein grüner Kasten mit einem Haken. Nun hat man zwei Möglichkeiten:
-
-1. Anzeigen des Studienverlaufsplanes durch Klick auf das Feld `Anzeigen`.
-
-2. Speichern des Studienverlaufsplanes durch Klick auf das Feld `Speichern`.
-
-
-
-![](hauptanwendung4.jpg)
-
-
-
-Sollte statt dem grünen Kasten ein roter Kasten mit einem Kreuz erscheinen, so ist die gewählte Fächerkombination, unter Berücksichtigung der ausgewählten Module und Kurse, nicht studierbar.
-
-
-![](hauptanwendung5.jpg)
-
-
-### <a name="fbd"></a>Stapel-Stundenpläne
-
-
-#### Funktionsbeschreibung
-
-
-Unter der Funktion Stapel-Stundenpläne werden die Studienverlaufspläne aller  möglichen Fächerkombinationen an der Fakultät mit einem Klick berechnet.
-Die berechneten Studienverlaufspläne könnnen daraufhin als PDF und/oder Zip-Datei auf dem Computer gespeichert werden. 
-Die Funktion ermöglicht es schnell und unkompliziert eine umfassende Übersicht, in Form der einzelnen Stundenpläne für jedes Semester, über alle Studiengänge der Fakultät zu erhalten.
-
-
-#### Bedienung  
-
-
-1. Klick auf das Feld `Erzeuge alle PDFs`.
-
-Das Tool berechnet nun die Studienverlaufspläne aller Fächerkombinationen an der Fakultät. Dies kann einige Zeit dauern.
-
-Nach dem Berechnen können die Studiengänge auf dem Computer gespeichert werden.
-
-1. Speichern der Studienverlaufspläne als PDF durch Klick auf das Feld `In Ordner exportieren`.
-
-2. Speichern der Studienverlaufspläne als Zip-Datei durch Klick auf das Feld `Zip-Datei exportieren`. 
-
-
-![](hauptanwendung7.jpg)
-
-
-
-### <a name="fbe"></a>Konfliktmatrix
-
-
-####Funktionsbeschreibung
-
-
-Unter der Funktion Konfliktmatrix werden alle vorhandenen Studiengänge graphisch in Form einer Matrix dargestellt.
-
-Sie bietet einen Überblick über die Studierbarkeit der einzelnen Fächerkombinationen an der Fakultät.
-
-
-####Umgang
-
-
-#####Bedienung
-
-
-1. Klick auf das Feld `Prüfe alle Kombinationen`.
-
-Nun wird die Studierbarkeit aller Fächerkombinationen überprüft.
-
-
-#####Bedeutung der Farben:
-
-
-**grün:** Fächerkombination ist studierbar.
-
-**rot (2 Punkte):** Fächerkombination ist nicht studierbar (Es treten Konflikte/Überschneidungen auf).
-
-**rot (3 Punkte):** Fächerkombination ist generell nicht studierbar (Kombination aus Haupt- und Nebenfach ist nicht studierbar).
-
-**grau:** Die Kombination ist aufgrund des selben Haupt- oder Nebenfaches nicht studierbar (Gleiches Haupt- und Nebenfach wurde ausgewählt).
- 
-
-###Unsat Core
-
-
-####Funktionsbeschreibung
-
-
-Mit der Funktion Schrittweise Konfliktsuche werden die Konfliktmodule eines Studienganges ermitelt. Konfliktmodule sind Module die sich zeitlich überschneiden und so zu einer nicht Studierbarkeit des Studienganges führen. 
-
-
-## 6.3<a name="fc"></a> Weitere Funktionen
-
-
-Neben den Hauptfunktionen verfügt das Programm über weitere wichtige Funktionen. Diese können in der obersten Leiste unter den Feldern `Datei`, `Bearbeiten`, `Ansicht` und `Hilfe` aufgerufen werden. 
-
-Das Feld `Datei` ist in folgende Funktionen unterteilt: 
-
-1. [Speichern und exportieren von Speicherständen](#fca)
-
-2. [Änderungsprotokoll](#fcb)
-
-3. [Bericht](#fcc)
-
-
-### <a name="fca"></a>Speichern und exportieren von Speicherständen
-
-
-#### <a name="ww"></a>Speichern
-
-
-Um vorgenommene Änderungen zu speichern werden die Funktionen `Speichern` und  `Speichern unter` verwendet. Beide Funktionen sind unter dem Feld `Datei` in der obersten Leiste des Tools aufrufbar.
-
-Die `Speichern` Funktion speichert die Änderungen in der aktuell geöffneten SQlite-Datenbank. 
-
-Durch das Benutzen der `Speichern unter` Funktion wird eine neue SQlite-Datenbank erstellt in der vorgenommene Änderungen abgespeichert werden. Die aktuell geöffnete Datenbank wird hierbei nicht überschrieben sondern verbleibt auf dem Stand, zu dem sie geöffnet wurde.
-
-
-####Exportieren von Speicherständen
-
-
-Die Funktion `Exportiere gespeicherten Stand` erstellt auf Basis der verwendeten SQlite-Datenbank neue Modulbaum und Moduldaten XML-Dokumente, welche als Zip-Datei abgespeichert werden können. 
-
-Etwaige Änderungen die mit Hilfe der Stundenplanansicht vorgenommen wurden, sind in diesen XML-Dokumenten enthalten.
- 
-
-### <a name="fcb"></a> Änderungsprotokoll
-
-
-####Funktionsbeschreibung
-
-
-Im Änderungsprotokoll werden die Verschiebungen von einzelnen Veranstaltungen notiert und gespeichert. Das Ziel ist es eine Übersicht über alle verschobenen Veranstaltungen zu erhalten, um so ein problemloses Arbeiten zu gewährleisten. 
-
-Hierbei unterscheidet das Änderungsprotokoll zwischen temporären und persistenten Einträgen. Bei temporären Einträgen handelt es sich um Verschiebungen, welche noch nicht abgespeichert wurden und somit noch veränderbar sind. Persistente Einträge wurden bereits gespeichert und können nur durch eine erneute Verschiebung wieder verändert werden.
-
-Das Änderungsprotokoll enthält neben den Namen der verschobenen Veranstaltungen auch Informationen über die betroffenen Zeitslots, sowie das Datum und die Uhrzeit an dem die Änderung vorgenommen wurde.
-
-
-####Übersicht
-
-
-![](aenderungsprotokoll3.jpg)
-
-
- Unter den temporären Änderungen befinden sich alle aktuell durchgeführten Anpassungen. Ein temporärer Eintrag wird erst zu einem persistenten Eintrag wenn die Änderungen gespeichert wurden und die neuentstandene SQlite-Datenbank mit dem Programm geöffnet wurde. Das Speichern erfolgt durch die Funktionen [Speichern](#ww) oder [Speichern unter](#ww).
-
-
-### <a name="fcc"></a> Bericht
-
-
-####Allgemeine Beschreibung
-
-
-Neben dem Änderungsprotokoll bietet das Planungswerkzeug für überschneidungsfreies Studieren ebenfalls die Möglichkeit sich einen Bericht anzeigen zu lassen. In diesem sind verschiedene Funktionen aufgelistet die bei der korrekten Erstellung der XML-Dokumente behilflich sein sollen. Des Weiteren beinhaltet er eine Gesamtstatistik der geöffneten Datenbank, in der z.B. die Anzahl der Studiengänge oder die Gesamtanzahl aller Gruppen aufgelistet ist.
-
-
-####Umfang und Kategorien
-
-
-Der Bericht ist in sechs einzelne Kategorien gegliedert:
-
-1. [Unmögliche Studiengänge](#xa)
-
-2. [Abstrakte Units ohne konkrete Ausprägung](#xb)
-
-3. [Abstrakte Units mit konkreter Ausprägung in unterschiedlichen Semestern](#xc)
-
-4. [Pflichtfächer pro Studiengang](#xd)
-
-5. [Quasi-Pflichtfächer pro Studiengang](#xe)
-
-6. [Redundante Unit Gruppen](#xf)
-
-
-##### <a name="xa"></a> 1.Unmögliche Studiengänge
-
-In der Kategorie `Unmögliche Studiengänge` sind alle Studiengänge aufgelistet die grundsätzlich nicht studierbar sind. Der Grund für die nicht Studierbarkeit des Studienganges ist hierbei nicht die Überschneidung von Veranstaltungen, sondern eine generelle nicht Studierbarkeit. Diese kann bei Fächerkombinationen auftreten die sich nicht miteinander vernüpfen lassen. Sollten hier ein alleinstehender Studiengang aufgelistet sein, so wurde dieser wahrscheinlich unvollständig oder fehlerhaft in die XML-Dokumente eingetragen. 
-
-
-##### <a name="xb"></a> 2.Abstrakte Units ohne konkrete Ausprägung
-
-
-Die Kategorie `Abstrakte Units ohne konkrete Ausprägung` beinhaltet alle Kurse, die in der [Kursgliederung](#bc) des Dokuments Moduldaten aufgelistet sind, denen aber keine konkreten Veranstaltungen im [Veranstaltungsverzeichnis](#bd) des Dokuments Moduldaten zugeordnet sind. 
-
-
-Es gibt meist zwei Ursachen für dieses Problem:
-
-1. Die IDs des Kurses in der Kursgliederung oder der Veranstaltung im Veranstaltungsverzeichnis wurden fehlerhaft eingetragen, weshalb die IDs voneinander abweichen und somit keine Zuordnung stattfinden kann.
-
-2.  Es wurde keine konkrete Veranstaltung im Veranstaltungsverzeichnis eingetragen, da z.B. die Termine noch nicht bekannt sind oder die Veranstaltung aktuell nicht stattfindet.
-
-Beide Fälle führen dazu, dass der Kurs bei der Überprüfung der Studierbarkeit und der Berechnung des Studienverlaufsplans nicht berücksichtigt wird. Dies kann zur fehlerhaften Berechnung des Studienplanes oder zur nicht Studierbarkeit des Studienganges führen.
-
-Daher ist es wichtig etwaige Eintragungsfehler zu berichtigen und fehlende Daten schnellstmöglich nachzutragen, um so Fehler zu vermeiden. 
-
-
-##### <a name="xc"></a> 3. Abstrakte Units mit konkreter Ausprägung in unterschiedlichen Semestern
-
-
-Unter dieser Kategorie sind alle Kurse aufgelistet bei denen die Semestereintragungen in der [Kursgliederung](#bc) und im [Veranstaltungsverzeichnis](#bd) des Dokuments Moduldaten voneinander abweichen. Sollte dies der Fall sein liegt ein Eintragungsfehler vor, welcher berichtigt werden sollte.
-
-Hierfür vergleicht man die Semestereintragungen des Kurses in der Kursgliederung und im Veranstaltungsverzeichnis des Dokuments Moduldaten mit den tatsächlichen Zeiten und berichtigt die Abweichungen.
-
-Abweichende Semestereintragungen führen dazu, dass ein Kurs und damit meist das gesamte Modul bei der Überprüfung der Studierbarkeit und der Erstellung eines Studienverlaufsplanes des Studienganges nicht berücksichtigt wird. Hierdurch kann es passieren, das Fächerkombinationen als nicht studierbar angezeigt werden, obwohl sie es eigentlich sind.
-
-
-##### <a name="xd"></a> 4. Pflichtfächer pro Studiengang
-
-
-Die Kategorie `Pflichtfächer pro Studiengang` umfasst alle Module die laut Prüfungsordnung zum Abschluss des Studienganges zwingend belegt werden müssen. 
-
-Im oberen Abschnitt könnnen die einzelnen Studiengänge ausgewählt werden, woraufhin im unteren Abschnitt die Pflichtfächer des ausgewählten Studienganges angezeigt werden.
-
-
-![](bericht2.jpg)
-
-
-##### <a name="xe"></a> 5. Quasi-Pflichtfächer pro Studiengang
-
-
-In der Kategorie `Quasi-Pflichtfächer pro Studiengang` sind alle Module eines Studiengangs aufgelistet, welche in der Prüfungsordnung nicht als Pflichtmodule aufgelistet sind, bei denen eine Belegung jedoch notwendig ist um den gewählten Studiengang zu studieren.
-
-Der Aufbau ist identisch mit dem aus Kategorie 4, sodass im oberen Abschnitt die Auswahl des konkreten Studienganges erfolgt und daraufhin im unteren Abschnitt die Quasi-Pflichtfächer des ausgewählten Studienganges angezeigt werden.
-
-
-##### <a name="xf"></a> 6. Redundante Unit Gruppen
-
-
-Unter der Kategorie `Redundante Unit Gruppen` sind Gruppen des selben Kurses aufgelistet, bei denen alle zeitlichen Eintragungen gleich sind.
-Dies bedeutet, dass die abgebildeten Gruppen mehrfach im [Veranstaltungsverzeichnis](#bd) des Dokuments Moduldaten eingetragen wurden.
-
-Um dies zu berichtigen muss man den aufgelisteten Kurs im Veranstaltungsverzeichnis suchen und entsprechende doppelte Gruppeneintragungen löschen. 
-
-
-![](bericht3.jpg)
-
-
-
-##Häufig auftretende Fehler
-
-
-### <a name="ga"></a> Beim Programmstart
+### <a name="ga"></a> 8.1 Beim Programmstart
 
 
 Beim erstmaligen Starten des Programms kann es zu einigen Fehlern kommen. Sollte das Programm auf einem neuem Rechner nicht funktionieren sind folgende Punkte zu beachten:
@@ -1068,7 +1400,7 @@ Damit das Programm fehlerfrei funktioniert wird ein Rechner mit einem 64-bit Bet
 Sollten die Daten und/oder das Programm auf einem Netzwerklaufwerk gespeichert sein und nicht auf der Festplatte des Computers, kann es zu Fehlern beim Start des Programms kommen. Das Speichern auf Netzwerklaufwerken ist daher zu vermeiden.
 
 
-### <a name="gb"></a> Beim Einlesen der Datenbanken
+### <a name="gb"></a> 8.2 Beim Einlesen der Datenbanken
 
 
 Beim Einlesen einer Datenbank mithilfe der Hauptanwendung kann es zu folgender Fehlermeldung kommen.
@@ -1082,7 +1414,7 @@ Sollte diese Fehlermeldung auftreten handelt es sich bei der einzulesenden Daten
 **Lösung:** Entweder neueste Datenbank runterladen, oder mit der aktuellen Mincer-Version eine Datenbank aus den selben Modulbaum und Moduldaten Dateien erstellen, die bei der veralteten Datei verwendet wurden.
 
 
-### <a name="gc"></a> Beim Zusammenfügen der XML-Dokumente
+### <a name="gc"></a> 8.3 Beim Zusammenfügen der XML-Dokumente
 
 
 Beim Zusammenfügen der XML-Dokumente mit der Anwendung Mincer kann es zu verschiedenen Fehlermeldungen kommen. Bei dem Großteil der Fehlermeldungen ist die entsprechende fehlerhafte Stelle im Dokument bereits angegeben. Hiervon ausgenommen sind die Fehlermeldungen:
@@ -1100,3 +1432,7 @@ Solch eine Fehlermeldung entsteht, wenn bestimmte Studiengänge oder Module nich
 
 
 ![](fehlerbeschreibung4.jpg)
+
+
+
+
