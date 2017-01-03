@@ -72,10 +72,10 @@
 
 Das Planungswerkzeug für überschneidungsfreies Studieren besteht aus **vier Hauptbestandteilen**: 
  
-1. **Zwei XML-Dokumente ( Modulbaum und Moduldaten)** ([Download](https://github.com/plues/data/tree/2.2.0/raw))
+1. **Zwei XML-Dokumente ( Modulbaum und Moduldaten)** ([Download](https://github.com/plues/data/tree/develop/raw))
 2. **Mincer zum Zusammenfügen der Dokumente**
- * [Windows](https://github.com/plues/mincer/releases/download/2.1.0/mincer-2.1.0.exe)
- * [MacOS/Linux](https://github.com/plues/mincer/releases/download/2.1.0/mincer-2.1.0-standalone.jar)
+ * [Windows](https://www3.hhu.de/stups/downloads/plues/mincer/mincer-2.2.0-SNAPSHOT.exe)
+ * [MacOS/Linux](https://www3.hhu.de/stups/downloads/plues/mincer/mincer-2.2.0-SNAPSHOT-standalone.jar)
 3. **SQlite-Datenbank** ([Download](](https://github.com/plues/data/releases/tag/2.2.0))  
 4. **Hauptanwendung** ([Download](https://github.com/plues/plues/releases/tag/2.0.0-PREVIEW34))  
 
@@ -102,7 +102,7 @@ Um ein vernünftiges Arbeiten mit dem Planungswerkzeug für überschneidungsfrei
 ### <a name="fa"></a> 2.1 Starten der Hauptanwendung und Einlesen der Daten
 
 
-Die Hauptanwendung wird durch die Datei **plues-2.0.0-PREVIEW4** gestartet. Nach dem Starten erscheint folgender Bildschirm:
+Die Hauptanwendung wird durch die Datei **plues-2.0.0-PREVIEW5** gestartet. Nach dem Starten erscheint folgender Bildschirm:
 
 
 ![](hauptanwendung1.jpg)
