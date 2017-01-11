@@ -8,7 +8,7 @@ dependencies:
 	git submodule update --init
 
 handbook-1.1.0-dev.html:  $(MARKDOWN) dependencies
-	pandoc -f markdown -t html --css=markdown-css-themes/avenir-white.css \
+	pandoc -f markdown -t html --css=markdown-css-themes/markdown10.css \
 		--standalone --self-contained $(MARKDOWN) -o $@
 
 handbook.html: handbook-1.1.0-dev.html
