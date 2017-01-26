@@ -196,7 +196,7 @@ Die Kurse in der Stundenplansicht können sowohl nach Studiengängen, als auch n
 4. **Nur units der ausgewählten Studiengänge:** Es werden nur Kurse der in der oberen Hälfte ausgewählten Studiengänge angezeigt.
 
 
-![](Stundenplanansicht2.jpg) 
+![](stundenplanansicht2.jpg) 
 
 
 **Beachte:** Die Filter-Optionen beeinflussen nur die aufgelisteten Kurse im linken unteren Abschnitt der Funktion (siehe Abbildung). Um die Stundenplanansicht auf der rechten Seite zu filtern, müssen einzelne Studiengänge oder Kurse auf der linken Seite ausgewählt werden.
@@ -224,7 +224,7 @@ Nun wird die Sitzung in den entsprechenden Zeitslot verschoben.
 Um sich in der Stundenplanansicht nähere Informationen zu einem Kurs anzeigen zu lassen, ist ein Doppelklick auf den jeweiligen Kurs nötig. Daraufhin erscheint folgendes Fenster:
 
 
-![](Stundenplanansicht3.jpg)
+![](stundenplanansicht3.jpg)
 
 
 Im Abschnitt **Kurs-Verteilung** sind alle Studiengänge aufgelistet, in welchen der ausgewählte Kurs vorkommt. Zusätzlich ist noch das Modul angegeben, zu dem der Kurs gehört, sowie das Semester in dem er stattfindet und ob es sich um einen Pflicht- oder Wahlkurs handelt.
@@ -1132,22 +1132,22 @@ Bei dem Erstellen neuer Studiengänge müssen beide Dokumente, Modulbaum und Mod
 
 
 ##### Eintragung in die Modulgliederung des Dokuments  Modulbaum
-
-1. **Öffnen Datei Modulbaum.**
-2. **Scrollen bis vorletze Zeile.**  
+
+1. **Öffnen Datei Modulbaum.**
+2. **Scrollen bis vorletze Zeile.**  
 3. **Erstellen des Studiengangs:**  
-  1. Ausdruck als vorletzte Zeile einfügen: `<b cp="" abschl="" stg="" kzfa="" pversion="" name="">` (bei der philosophischen Fakultät kann auf den Ausdruck `cp=""` verzichtet werden, da keine Credit Points angegeben werden).  
-  2. Informationen über den Studiengang in die Anführungszeichen einsetzen (siehe [Abkürzungsverzeichnis](#abkmb)).  
-  3. **Hinweis:** Bei der Eintragung darauf achten, dass der Ausdruck `</modulbaum>` weiterhin ganz am Ende des Dokuments steht 
-4. **Gliederung des Studienganges in verschiedene Modularten (Wahl-, Pflicht-, Aufbau-, Vertiefungsmodule usw.):**  
-  1. Die Zeile: `<l name="" min-cp="" max-cp="">` für jede Modulart einfügen.  
-  2. Informationen in die Anführungszeichen einfügen.  
-5. **Einfügen der einzelnen Module:**
-  1. Für jedes Modul wird die Zeile: `<m cp="" name="" pordnr=""/>` eingefügt.  
-  2. Informationen in die Anführungszeichen einsetzen.  
-6. **Schließen der einzelnen Abschnitte:**
-  1. Nach dem Eintragen der einzelnen Module den Ausdruck `</l>` verwenden um die Gliederung in Modularten aus Schritt 4 zu beenden.  
-  2. Zum Schließen des Studienganges den Ausdruck `</b>` verwenden.  
+  1. Ausdruck als vorletzte Zeile einfügen: `<b cp="" abschl="" stg="" kzfa="" pversion="" name="">` (bei der philosophischen Fakultät kann auf den Ausdruck `cp=""` verzichtet werden, da keine Credit Points angegeben werden).  
+  2. Informationen über den Studiengang in die Anführungszeichen einsetzen (siehe [Abkürzungsverzeichnis](#abkmb)).  
+  3. **Hinweis:** Bei der Eintragung darauf achten, dass der Ausdruck `</modulbaum>` weiterhin ganz am Ende des Dokuments steht 
+4. **Gliederung des Studienganges in verschiedene Modularten (Wahl-, Pflicht-, Aufbau-, Vertiefungsmodule usw.):**  
+  1. Die Zeile: `<l name="" min-cp="" max-cp="">` für jede Modulart einfügen.  
+  2. Informationen in die Anführungszeichen einfügen.  
+5. **Einfügen der einzelnen Module:**
+  1. Für jedes Modul wird die Zeile: `<m cp="" name="" pordnr=""/>` eingefügt.  
+  2. Informationen in die Anführungszeichen einsetzen.  
+6. **Schließen der einzelnen Abschnitte:**
+  1. Nach dem Eintragen der einzelnen Module den Ausdruck `</l>` verwenden um die Gliederung in Modularten aus Schritt 4 zu beenden.  
+  2. Zum Schließen des Studienganges den Ausdruck `</b>` verwenden.  
 **Beispiel Bachelor Wirtschaftschemie (nur Pflichtmodule eingefügt)**
 
 
@@ -1158,15 +1158,15 @@ Bei dem Erstellen neuer Studiengänge müssen beide Dokumente, Modulbaum und Mod
 
 
 ![](anleitung1.jpg)
-1. **Öffnen der Datei Moduldaten.**  
-2. **Scrollen bis zum Ende des 1. Abschnitts der Datei.**
-  Nachfolgende Eintragungen werden zwischen den Audrücken `<modules>` und `</modules>` in das Dokument eingetragen.
-3. **Erstellen eines Moduls:**
-  1. Die Zeile `<module title="" id="" elective-units="" type="" pordnr="" cp="">` einfügen (Bei der philosophischen Fakultät kann auf den Ausdruck `cp=""` verzichtet werden, da die Module nicht auf Credit Points basieren).  
-  2. Informationen in die Anführungszeichen einsetzen (siehe [Abkürzungsverzeichnis](#abkmd1)).  
-4. **Einfügen der einzelnen Kurse:**
-  1. Die Zeile `<abstract-unit title="" id="" type="" semester=""/>` für jeden Kurs einfügen.  
-  2. Informationen in die Anführungszeichen einsetzen.
+1. **Öffnen der Datei Moduldaten.**  
+2. **Scrollen bis zum Ende des 1. Abschnitts der Datei.**
+  Nachfolgende Eintragungen werden zwischen den Audrücken `<modules>` und `</modules>` in das Dokument eingetragen.
+3. **Erstellen eines Moduls:**
+  1. Die Zeile `<module title="" id="" elective-units="" type="" pordnr="" cp="">` einfügen (Bei der philosophischen Fakultät kann auf den Ausdruck `cp=""` verzichtet werden, da die Module nicht auf Credit Points basieren).  
+  2. Informationen in die Anführungszeichen einsetzen (siehe [Abkürzungsverzeichnis](#abkmd1)).  
+4. **Einfügen der einzelnen Kurse:**
+  1. Die Zeile `<abstract-unit title="" id="" type="" semester=""/>` für jeden Kurs einfügen.  
+  2. Informationen in die Anführungszeichen einsetzen.
 5. **Schließen des Moduls:**  
 Nach dem Eintragen aller Kurse wird das Modul durch den Ausdruck `</modules>` geschlossen.   
 
