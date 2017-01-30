@@ -72,12 +72,13 @@
 
 Das Planungswerkzeug für überschneidungsfreies Studieren besteht aus **vier Hauptbestandteilen**: 
  
-1. **Zwei XML-Dokumente ( Modulbaum und Moduldaten)** ([Download](https://github.com/plues/data/tree/develop/raw))
-2. **Mincer zum Zusammenfügen der Dokumente**
- * [Windows](https://www3.hhu.de/stups/downloads/plues/mincer/mincer-2.2.0-SNAPSHOT.exe)
- * [MacOS/Linux](https://www3.hhu.de/stups/downloads/plues/mincer/mincer-2.2.0-SNAPSHOT-standalone.jar)
-3. **SQlite-Datenbank** ([Download](](https://github.com/plues/data/releases/tag/2.2.0))  
-4. **Hauptanwendung** ([Download](https://github.com/plues/plues/releases/tag/2.0.0-PREVIEW34))  
+1. **Zwei XML-Dokumente ( Modulbaum und Moduldaten)** ([Download](https://github.com/plues/data/tree/2.3.0/raw))  
+
+2. **Mincer zum Zusammenfügen der Dokumente** ([Download](https://github.com/plues/mincer/releases/tag/2.1.0))  
+
+3. **SQlite-Datenbank** ([Download](https://github.com/plues/data/releases/tag/2.3.0))  
+
+4. **Hauptanwendung** ([Download](https://github.com/plues/plues/releases/tag/2.0.0))  
 
 Als Grundlage dienen zwei XML-Dokumente, der Modulbaum und die Moduldaten. Diese enthalten alle relevanten Informationen der einzelnen Kurse und Module eines Studienganges, sowie die genauen Veranstaltungszeiten. Die Anwendung mincer fügt diese beiden Dateien zu einer gemeinsamen SQlite- Datenbank zusammen, welche als Grundlage für die Hauptanwendung dient. Nachdem die SQlite-Datenbank von der Hauptanwendung geöffnet wurde, ist diese funktionsfähig.
 
@@ -102,7 +103,7 @@ Um ein vernünftiges Arbeiten mit dem Planungswerkzeug für überschneidungsfrei
 ### <a name="fa"></a> 2.1 Starten der Hauptanwendung und Einlesen der Daten
 
 
-Die Hauptanwendung wird durch die Datei **plues-2.0.0-PREVIEW5** gestartet. Nach dem Starten erscheint folgender Bildschirm:
+Die Hauptanwendung wird durch die Datei **plues-2.0.0** gestartet. Nach dem Starten erscheint folgender Bildschirm:
 
 
 ![](hauptanwendung1.jpg)
@@ -119,10 +120,17 @@ Als nächster Schritt muss die entsprechende Datenbank im Programm geöffnet wer
 
 4. Auswahl bestätigen durch Klick auf das Feld `Öffnen`.
 
-Nach dem Öffnen der Datenbank beginnt das Programm mit dem Einlesen der Daten. Angezeigt wird dies auf der rechten Seite des Bildschirms (siehe Abbildung).
+Nach dem Öffnen der Datenbank beginnt das Programm mit dem Einlesen der Daten. Angezeigt wird dies anhand des Ladebalkens am rechten unteren Rand des Bildschirms(siehe Abbildung). 
 
 
 ![](hauptanwendung2.jpg)
+
+
+
+Durch einen Klick auf den Balken erhält man eine genauere Übersicht über die laufenden Prozesse. Es wird folgendes angezeigt:
+
+
+![](hauptanwendung3.jpg)
 
 
 Das Einlesen kann je nach Größe der Datenbank einige Zeit in Anspruch nehmen. Nachdem die Datenbank eingelesen wurde können alle Funktionen des Tools genutzt werden.
@@ -148,10 +156,10 @@ Das Planungswerkzeug für überschneidungsfreies Studieren bietet verschiedene F
 
 6. [Konfliktsuche](#fbf)
 
-Diese sind im oberen Drittel der Startseite aufgelistet.
+Diese sind im oberen Drittel der Startseite aufgelistet:
 
 
-![](hauptanwendung3.jpg)
+![](hauptanwendung4.jpg)
 
 
 ###<a name="fba"></a> Stundenplanansicht
@@ -160,13 +168,38 @@ Diese sind im oberen Drittel der Startseite aufgelistet.
 ####Funktionsbeschreibung
 
 
-Die Funktion Stundenplansicht ermöglicht es einzelne Veranstaltungen zu verschieben, um so Veranstaltungszeiten anzupassen. Hierfür können die Veranstaltungen innerhalb der Übersicht einfach in die gewünschten Zeitslots verschoben werden. Weiterhin kann die Studierbarkeit der einzelnen Studiengänge überprüft werden. Hierdurch wird nach der Verschiebung eines Kurses kontrolliert, ob es zu Überschneidungen in den betroffenen Studiengängen kommt. Ensprechende Überschneidungen werden daraufhin angezeigt. Zur einfacheren Bedienung sind zusätzlich noch Filter vorhanden, mit denen einzelne Studiengänge und Veranstaltungen ausgewählt werden können.
+Die Funktion Stundenplansicht ermöglicht es einzelne Veranstaltungen zu verschieben, um so Veranstaltungszeiten anzupassen. Hierfür können die Veranstaltungen innerhalb der Übersicht einfach in die gewünschten Zeitslots verschoben werden. Weiterhin kann die Studierbarkeit der einzelnen Studiengänge überprüft werden. Hierdurch wird nach der Verschiebung eines Kurses kontrolliert, ob es zu Überschneidungen in den betroffenen Studiengängen kommt. Ensprechende Überschneidungen werden daraufhin angezeigt. Zur einfacheren Bedienung sind zusätzlich noch Filter vorhanden, mit denen einzelne Studiengänge und Veranstaltungen in der Stundenplanansicht herausgefiltert werden können.
+
+
+#### Aufbau
+
+
+Auf der rechten Seite ist die Stundenplanansicht abgebildet. In dieser sind alle Kurse der Fakultät aufgelistet und in ihre jeweiligen Zeitslots unterteilt.
+Auf der linken Seite der Funktion können die Filter ausgewählt, sowie die Studierbarkeit einzelner Studiengänge kontrolliert, werden. Um zwischen den Filtern und der Studiengangkontrolle zu wechseln werden die beiden buttons `check`und `filter` auf der linken Seite der Funktion benutzt (siehe Abbildung). 
+Durch weitere Klicks auf die buttons `check`und `filter`,können die Filter und das Menü zur Kontrolle der Studiengänge ausgeblendet und wieder eingeblendet werden. 
+
+
+![](stundenplanansicht1.jpg)
 
 
 #### Filtern der Kurse
 
 
-Auf der linken Seite der Funktion können die einzelnen Kurse, die an der Fakultät angeboten werden, gefiltert werden. In der oberen Hälfte sind die Studiengänge, unterteilt nach Bachelor und Master, aufgelistet  und in der unteren Hälfte die einzelnen Kurse. 
+Die Kurse in der Stundenplansicht können sowohl nach Studiengängen, als auch nach einzelnen Kursen gefiltert werden. Die Studiengänge können in der oberen Hälfte ausgewählt werden und sind in Bacholer und Master Studiengänge unterteilt. Neben den Studiengängen können in der unteren Hälfte einzelne Kurse ausgewählt werden. Falls ein bestimmter Kurs ausgewählt werden soll, kann dieser mit Hilfe der Suchfunktion (siehe Abbildung) einfach ausfindig gemacht werden. Des Weiteren kann die Anzahl der aufgelisteten Kurse, mithilfe der Filter-Optionen (siehe Abbildung), angepasst werden. Es gibt folgende Möglichkeiten:
+
+1. **Nur ausgewählte units:** Es werden nur Kurse angezeigt die bereits ausgewählt wurden.
+
+2.  **Nur nicht ausgewählte Units:** Es werden alle Kurse angezeigt die noch nicht ausgewählt wurden.
+
+3. **Alle units:** Es werden alle Kurse der Fakultät angezeigt.
+
+4. **Nur units der ausgewählten Studiengänge:** Es werden nur Kurse der in der oberen Hälfte ausgewählten Studiengänge angezeigt.
+
+
+![](stundenplanansicht2.jpg) 
+
+
+**Beachte:** Die Filter-Optionen beeinflussen nur die aufgelisteten Kurse im linken unteren Abschnitt der Funktion (siehe Abbildung). Um die Stundenplanansicht auf der rechten Seite zu filtern, müssen einzelne Studiengänge oder Kurse auf der linken Seite ausgewählt werden.
 
 
 ####Verschiebung von Sitzungen
@@ -185,31 +218,69 @@ Nun wird die Sitzung in den entsprechenden Zeitslot verschoben.
 **Hinweis:** Es sind nur Verschiebungen innerhalb eines Semesters möglich.
 
 
-####Überprüfung der Studierbarkeit und Bestimmung von Konflikten
+####Kursdetails anzeigen
 
 
-1. Klick auf den Tab `Check` im linken oberen Abschnitt der Funktion.
+Um sich in der Stundenplanansicht nähere Informationen zu einem Kurs anzeigen zu lassen, ist ein Doppelklick auf den jeweiligen Kurs nötig. Daraufhin erscheint folgendes Fenster:
+
+
+![](stundenplanansicht3.jpg)
+
+
+Im Abschnitt **Kurs-Verteilung** sind alle Studiengänge aufgelistet, in welchen der ausgewählte Kurs vorkommt. Zusätzlich ist noch das Modul angegeben, zu dem der Kurs gehört, sowie das Semester in dem er stattfindet und ob es sich um einen Pflicht- oder Wahlkurs handelt.
+ 
+
+####Überprüfung der Studierbarkeit 
+
+
+1. Klick auf den Button `Check` im linken oberen Abschnitt der Funktion.
 
 2. Auswählen des zu überprüfenden Studiengangs oder Faches. 
 
 3. Klick auf den Button `Prüfe Erfüllbarkeit`.
 
-Nun wird die Studierbarkeit des gewählten Studienganges berechnet.
+Nun wird die Studierbarkeit des gewählten Studienganges berechnet. Hierbei wird nach drei Arten unterschieden; studierbare Studiengänge, nicht studierbare Studiengänge und generell nicht studierbare Studiengänge.
 
 
-![](stundenplanansicht.jpg)
+![](stundenplanansicht4.jpg)
 
 
+#####Studierbare Studiengänge
+
+
+Studierbare Studiengänge können nun in der Stundenplanansicht hervorgehoben werden. Hierfür wird die Funktion `Im Stundenplan hervorheben` ausgewählt und mit einem Klick auf den Button `Los` bestätigt. Nun wählt das Programm automatisch den entsprechenden Filter aus, sodass nur noch die Kurse des entsprechenden Studiengangs angezeigt werden.
+
+Des Weiteren kann der Studiengang erneut, unter der Berücksichtigung spezieller Kurse, berechnet werden. Hierfür wird die Funktion `Partiellen Stundenplan generieren` ausgewählt und mit einen Klick auf den Button `Los` bestätigt. Nun leitet einen das Programm zu der Hauptfunktion [Partielle Studienpläne](#fbc) weiter.
+
+
+#####Nicht studierbare Studienänge
+
+ 
 Bei Studiengängen, die aufgrund von Konflikten nicht Studierbar sind, können nun die Konfliktsitzungen berechnet werden.
 
 1. Auswählen der Funktion `Konflikt Bestimmen`. 
 
 2. Klick auf den Button `Los`.
 
-Die Konfliktsitzungen des Studieganges werden daraufhin berechnet und angezeigt. Diese können durch Klick auf den Button `Konflikte hervorheben` in der Stundenplanansicht markiert werden.
+Die Konfliktsitzungen des Studieganges werden daraufhin berechnet und angezeigt. Diese können durch einen Klick auf den Button `Konflikte hervorheben`, in der Stundenplanansicht markiert werden.
 
 
-![](stundenplanansicht2.jpg)
+![](stundenplanansicht5.jpg)
+
+
+Bei markierten Konflikten wird sowohl der Zeitslot, in dem der Konflikt liegt, rot umrandet, als auch die entsprechenden Konfliktkurse rot hervorgehoben. Des Weiteren werden noch die Semester hervorgehoben, in denen die Konfliktkurse stattfinden.
+
+
+![](stundenplanansicht6.jpg)
+
+
+Sobald ein Konflikt hervorgehoben wurde, erscheint neben den Button `Prüfe Erfüllbarkeit` ein weiterer Button mit der Bezeichnung `Hebe Konflikte nicht hervor`. Hiermit kann die Hervorhebung rückgängig gemacht werden.
+
+
+#####Generell nicht studierbare Studiengänge
+
+
+Mit generell nicht studiebaren Studiengängen kann nicht weiter gearbeitet werden. Sie können nur, durch einen Klick auf den Button `Los`, entfernt werden.
 
 
 ####Weitere Funktionen
@@ -243,31 +314,51 @@ Die Funktion PDF-Studienpläne berechnet Studienverlaufspläne von ausgewählten
 
 2. Generieren des Studienverlaufsplans durch Klick auf den Button `Generieren`.
 
-Nun berechnet das Programm den Studienverlaufsplan für die ausgewählte Fächerkombination. Dies sollte nur einen kurzen Moment dauern. 
+Nun berechnet das Programm den Studienverlaufsplan für die ausgewählte Fächerkombination. Dies sollte nur einen kurzen Moment dauern. Es gibt drei mögliche fälle, die sich nach dem Berechnen es Studienverlaufsplanes einstellen können; der Studiengang ist studierbar, es kam zu einer Zeitüberschreitung beim Berechnen oder der Studiengang ist nicht studierbar.
+
+
+![](pdfstudienplaene.jpg)
 
 
 #####1. Fall: Fächerkombination ist studierbar 
 
 
 Es erscheint ein grüner Kasten mit einem Haken.   
-Nun gibt es drei Möglichkeiten:  
+Nun gibt es mehrere Möglichkeiten:  
 
-1. Anzeigen des Studienverlaufsplans.
+1. **Anzeigen:** Studienverlaufsplan wird als PDF angezeigt.
 
-2. Speichern des Studienverlaufsplans.
+2. **Speichern:** Studienverlaufsplan wird auf dem Computer gespeichert.
 
-3. Entfernen des Studienverlaufsplans.
+3. **In Stundenplanansicht öffnen:** Entsprechender Studiengang wird in der Funktion [Stundenplanansicht](#fba) angezeigt.
+
+4. **Partiellen Stundenplan generieren:** Entsprechender Studiengang wird in der Funktion [Partielle Studienpläne](#fbc) angezeigt.
+
+5. **Entfernen:** Studienverlaufsplan wird wieder entfernt.
 
 Hierfür klickt man auf das Feld `Anzeigen` und wählt die entsprechende Funktion aus. Bestätigt wird die Auswahl durch einen Klick auf das Feld `Los`.
 
 
-#####2. Fall: Fächerkombination ist nicht studierbar
+##### 2. Fall: Zeitüberschreitung beim Berechnen
 
 
-Es erscheint ein roter Kasten mit einem Kreuz. Dieser kann durch einen Klick auf den Button `Los` wieder entfernt werden.
+Es erscheint ein gelber Kasten mit einem Fragezeichen. Nun hat man folgende Möglichkeiten:
+
+1. **In Stundenplanansicht öffnen:** Entsprechender Studiengang wird in der Funktion [Stundenplanansicht](#fba) angezeigt.
+
+2. **Berechnung neu starten:** Berechnung des Studienverlaufsplans wird neu gestartet (Timeout sollte davor unter dem tab [Bearbeiten](#fdb) angepasst werden). 
+
+3. **Entfernen:** Studienverlaufsplan wird wieder entfernt.
 
 
-![](pdfstudienplaene.jpg)
+#####3. Fall: Fächerkombination ist nicht studierbar
+
+
+Es erscheint ein roter Kasten mit einem Kreuz. Nun hat man folgende Möglichkeiten:
+
+1. **In Stundenplanansicht öffnen:** Entsprechender Studiengang wird in der Funktion [Stundenplanansicht](#fba) angezeigt.
+
+2. **Entfernen:** Studienverlaufsplan wird wieder entfernt.
 
 
 ### <a name="fbc"></a>Partielle Studienpläne
@@ -298,7 +389,7 @@ Sollte die ausgewählte Kombination studierbar sein, erscheint unter dem Feld `c
 
 
 
-![](partiell-studienplan.jpg)
+![](partiell-studienplan1.jpg)
 
 
 
@@ -343,16 +434,19 @@ Nach dem Berechnen können die Studiengänge auf dem Computer gespeichert werden
 #####Funktionsbeschreibung
 
 
-Unter der Funktion Konfliktmatrix werden alle vorhandenen Studiengänge graphisch in Form einer Matrix dargestellt.  Sie bietet einen Überblick über die Studierbarkeit aller Studiengänge einer Fakultät. 
+Unter der Funktion Konfliktmatrix werden alle vorhandenen Studiengänge, graphisch in Form einer Matrix, dargestellt.  Sie bietet einen Überblick über die Studierbarkeit aller Studiengänge der Fakultät. 
 
 
 
 ##### Ansicht
 
 
-Die Ansicht ist unterteilt in kombinierbare Studiengänge, alleinstehende Studiengänge und einzelne Studiengänge. Kombinierbare Studiengänge bestehen aus Haupt- und Nebenfach. Bei alleinstehenden Studiengängen handelt es sich um integrierte Studiengänge die ohne die Wahl eines weiteren Fachs studierbar sind. Unter der Kategorie einzelne Studiengänge sind alle Fächer einer Fakultät, also sowohl integrierte Studiengänge als auch Haupt- und Nebenfächer aufgelistet.
+Die Ansicht ist unterteilt in Kombinations-Studiengänge, integrative Studiengänge und einzelne Studiengänge. Kombinations-Studiengänge bestehen aus Haupt- und Nebenfach. Bei integrativen Studiengängen handelt es sich um integrierte Studiengänge die ohne die Wahl eines weiteren Fachs studierbar sind. Unter der Kategorie einzelne Studiengänge sind alle Fächer einer Fakultät, also sowohl integrative Studiengänge als auch Haupt- und Nebenfächer aufgelistet.
 
-Des Weiteren ist im oberen Abschnitt eine Übersicht gegeben, in der die Gesamtanzahl aller erfüllbaren Studiengänge, nicht erfüllbaren Studiengänge und Zeitüberschreitungen bei der Berechnung von Studiengängen angezeigt wird. 
+Des Weiteren ist im oberen Abschnitt eine Übersicht gegeben, in der die Gesamtanzahl aller **erfüllbaren Studiengänge**, **nicht erfüllbaren Studiengänge**, **generell nicht efüllbaren Studiengänge** und **Zeitüberschreitungen** bei der Berechnung von Studiengängen angezeigt wird. 
+
+
+![](konfliktmatrix.jpg)
 
 
 #####Bedienung
@@ -360,7 +454,7 @@ Des Weiteren ist im oberen Abschnitt eine Übersicht gegeben, in der die Gesamta
 
 1. Klick auf das Feld `Prüfe alle Kombinationen`.
 
-Nun wird die Studierbarkeit aller Studiengänge überprüft. Hierzu zählen sowohl kombinierbare Studiengänge, sowie alleinstehende und einzelne Studiengänge.
+Nun wird die Studierbarkeit aller Studiengänge überprüft. Hierzu zählen sowohl Kombinations-Studiengänge, sowie integrative und einzelne Studiengänge.
 
 
 
@@ -377,7 +471,7 @@ Nun wird die Studierbarkeit aller Studiengänge überprüft. Hierzu zählen sowo
 
 **grau (5 Punkte):** Die Kombination ist aufgrund des selben Haupt- und Nebenfaches nicht studierbar (Gleiches Haupt- und Nebenfach wurde ausgewählt).
  
-**weiß**: Weiße Felder bedeuten, dass die Studierbarkeit des relevanten Studienganges noch nicht berechnet wurde. Sollte eine Berechnung manuell abgebrochen werden, bleibt das Feld ebenfalls weiß.
+**weiß**: Weiße Felder bedeuten, dass die Studierbarkeit des relevanten Studienganges noch nicht berechnet wurde. Dies tritt auf, wenn eine Überprüfung manuell abgebrochen wird.
 
 
 ### <a name="fbf"></a> Konfliktsuche
@@ -388,7 +482,7 @@ Nun wird die Studierbarkeit aller Studiengänge überprüft. Hierzu zählen sowo
 
 Mit der Funktion Schrittweise Konfliktsuche werden zeitliche Konflikte innerhalb eines Studienganges berechnet. Bei der Berechnung dieser Konflikte geht das Programm schrittweise vor, um so die zeitlichen Konflikte in jeder Gliederungsebene angeben zu können. Als erstes werden die betroffenen Konfliktmodule berechnet. Um die Konflikte präziser darzustellen, können nun die betroffenen Kurse und als letzter Schritt die konkreten Gruppen berechnet werden. 
 
-Es werden sowohl zeitliche Konflikte zwischen Modulen innerhalb eines Fachs berechnet, als auch Konflikte zwischen Modulen des Haupt- und Nebenfachs eines Studienganges berechnet. 
+Es werden sowohl zeitliche Konflikte, zwischen Modulen innerhalb eines Fachs, berechnet, als auch Konflikte zwischen Modulen des Haupt- und Nebenfachs eines Studienganges. 
 
 
 ####Bedienung
@@ -401,7 +495,7 @@ Zur Berechnung der zeitlichen Konflikte eines Studienganges wird wie folgt vorge
 Nun werden alle Module bei denen es zu Überschneidungen kommt angezeigt. Neben der **PordNr** und dem **Namen** des Moduls, wird zusätzlich noch angegeben, ob es sich um ein **Wahl- oder Pflichtmodul** handelt (Kreuz bedeutet Pflichtmodul).
 
 
-![](konfliktsuche.jpg)
+![](konfliktsuche1.jpg)
 
 
 ##### 2. Konfliktkurse berechnen
@@ -428,6 +522,11 @@ Nun werden die konkreten Gruppen angezeigt, die im Konflikt zueinander stehen. N
 
 1. Klick auf den Button `Konflikt-Sitzungen Berechnen`
 
+Es werden die Sitzungen der Module angezeigt, die zur gleichen Zeit stattfinden und sich daher überschneiden. Neben dem **Titel** der Sitzung und ihrem **Schlüssel**, wird außerdem noch der Wochentag angezeigt, an dem es zur Überschneidung kommt.
+
+
+![](konfliktsuche4.jpg)
+
 
 ## 2.3 <a name="fc"></a> Weitere Funktionen
 
@@ -438,17 +537,17 @@ Neben den Hauptfunktionen verfügt das Programm über weitere wichtige Funktione
 ### <a name="fda"></a> Datei
 Das Feld Datei ist in folgende Funktionen unterteilt: 
 
-1. [Öffnen](#fca) 
+1. [Öffnen](#fca)(Strg+O) 
 
-2. [Speichern/Speichern unter](#fcb)
+2. [Speichern/Speichern unter](#fcb)(Strg+S/Strg+Shift+S)
 
-3. [Exportiere gespeicherten Stand](#fcc)
+3. [Exportiere gespeicherten Stand](#fcc)(Strg+E)
 
-4. [Änderungsprotokoll](#fcd)
+4. [Änderungsprotokoll](#fcd)(Strg+L)
 
-5. [Bericht](#fce)
+5. [Bericht](#fce)(Strg+R)
 
-
+Diese Funktionen können auch Mithilfe von Tastaturbefehlen benutzt werden (stehen in den Klammern).
 #### <a name="fca"></a> Öffnen
 
 
@@ -510,7 +609,7 @@ Das Änderungsprotokoll enthält neben den Namen der verschobenen Veranstaltunge
 ####Übersicht
 
 
-![](aenderungsprotokoll3.jpg)
+![](aenderungsprotokoll.jpg)
 
 
 Unter den temporären Änderungen befinden sich alle aktuell durchgeführten Anpassungen. Ein temporärer Eintrag wird erst zu einem persistenten Eintrag wenn die Änderungen gespeichert wurden und die neuentstandene SQlite-Datenbank mit dem Programm geöffnet wurde. Das Speichern erfolgt durch die Funktionen [Speichern](#ww) oder [Speichern unter](#ww).
@@ -639,7 +738,7 @@ Die Kategorie Pflichtmodule und Quasi-Pflichtmodule pro Studiengang umfasst alle
 Im oberen Abschnitt könnnen die einzelnen Studiengänge ausgewählt werden, woraufhin im unteren Abschnitt die Pflicht- und Quasi-Pflichtmodule des ausgewählten Studienganges angezeigt werden.
 
 
-![](bericht2.jpg)
+![](bericht1.jpg)
 
 
 #### <a name="xg"></a> 7. Quasi-Pflicht abstrakte Lehrveranstaltungen pro Modul
@@ -659,7 +758,7 @@ Dies bedeutet, dass diese Gruppen mehrfach eingetragen wurden.
 Um dies zu berichtigen, muss man die aufgelistete Veranstaltung im [Veranstaltungsverzeichnis](#bd) suchen und entsprechend doppelte Gruppeneintragungen löschen. 
 
 
-![](bericht3.jpg)
+![](bericht2.jpg)
 
 
 #### <a name="xi"></a> 9. Unmögliche Studiengänge mit fehlenden Lehrveranstaltungs-Informationen
@@ -684,7 +783,7 @@ Die in dieser Kategorie aufgelisteten Studiengänge enthalten zwei oder mehrere 
 
 Die Funktion `Wähle Timeout` ist unter dem Punkt `Bearbeiten` in der obersten Zeile aufrufbar. Mit ihr wird das Zeitlimit festgelegt, mit der das Programm die Studierbarkeit von Studiengängen berechnet. Die Standarddauer ist hierbei  auf eine Minute festgelegt. Sollte ein Studiengang nicht in einer Minute berechnet werden können, lässt sich die Dauer mit dieser Funktion anpassen.
 
-Nach einem Klick auf das Feld `Wähle Timeout`, hat man die Wahl zwischen Zeitlimits von einer Minute, drei Minuten, fünf Minuten oder einem selbst festgelegten Wert. Um ein individuelles Limit einzustellen, klickt man auf das Feld `Setze Timeout`.
+Nach einem Klick auf das Feld `Wähle Timeout`, hat man die Wahl zwischen Zeitlimits von einer Minute, drei Minuten, fünf Minuten oder einem selbst festgelegten Wert. Um ein individuelles Limit einzustellen, klickt man auf das Feld `Setze Timeout`. Sobald ein individueller Timeout ausgewählt wurde, wird dieser gespeichert und kann zu einem späteren Zeitpunkt wiederverwendet werden. Es wird immer nur ein individueller Timeout gespeichert.
 
 **Hinweis:** Selbst festgelegte Zeilimits werden in Sekunden eingegeben. 
 
@@ -729,7 +828,7 @@ Die Funktion `Über` ist unter dem Punkt `Hilfe` aufrufbar. Hier werden Informat
 ####Handbuch 
 
 
-Mit der Funktion `Handbuch Anzeigen` wird das Handbuch zum Planungswerkzeug für Überschneidungsfreies Studieren aufgerufen.
+Mit den Funktionen `Handbuch Anzeigen (HTML)` und `Handbuch Anzeigen (PDF)` wird das Handbuch zum Planungswerkzeug für Überschneidungsfreies Studieren, in dem  entsprechenden Format, aufgerufen.
 
 
 ##3.Anwendungsmöglichkeiten
@@ -1033,22 +1132,22 @@ Bei dem Erstellen neuer Studiengänge müssen beide Dokumente, Modulbaum und Mod
 
 
 ##### Eintragung in die Modulgliederung des Dokuments  Modulbaum
-
-1. **Öffnen Datei Modulbaum.**
-2. **Scrollen bis vorletze Zeile.**  
+
+1. **Öffnen Datei Modulbaum.**
+2. **Scrollen bis vorletze Zeile.**  
 3. **Erstellen des Studiengangs:**  
-  1. Ausdruck als vorletzte Zeile einfügen: `<b cp="" abschl="" stg="" kzfa="" pversion="" name="">` (bei der philosophischen Fakultät kann auf den Ausdruck `cp=""` verzichtet werden, da keine Credit Points angegeben werden).  
-  2. Informationen über den Studiengang in die Anführungszeichen einsetzen (siehe [Abkürzungsverzeichnis](#abkmb)).  
-  3. **Hinweis:** Bei der Eintragung darauf achten, dass der Ausdruck `</modulbaum>` weiterhin ganz am Ende des Dokuments steht 
-4. **Gliederung des Studienganges in verschiedene Modularten (Wahl-, Pflicht-, Aufbau-, Vertiefungsmodule usw.):**  
-  1. Die Zeile: `<l name="" min-cp="" max-cp="">` für jede Modulart einfügen.  
-  2. Informationen in die Anführungszeichen einfügen.  
-5. **Einfügen der einzelnen Module:**
-  1. Für jedes Modul wird die Zeile: `<m cp="" name="" pordnr=""/>` eingefügt.  
-  2. Informationen in die Anführungszeichen einsetzen.  
-6. **Schließen der einzelnen Abschnitte:**
-  1. Nach dem Eintragen der einzelnen Module den Ausdruck `</l>` verwenden um die Gliederung in Modularten aus Schritt 4 zu beenden.  
-  2. Zum Schließen des Studienganges den Ausdruck `</b>` verwenden.  
+  1. Ausdruck als vorletzte Zeile einfügen: `<b cp="" abschl="" stg="" kzfa="" pversion="" name="">` (bei der philosophischen Fakultät kann auf den Ausdruck `cp=""` verzichtet werden, da keine Credit Points angegeben werden).  
+  2. Informationen über den Studiengang in die Anführungszeichen einsetzen (siehe [Abkürzungsverzeichnis](#abkmb)).  
+  3. **Hinweis:** Bei der Eintragung darauf achten, dass der Ausdruck `</modulbaum>` weiterhin ganz am Ende des Dokuments steht 
+4. **Gliederung des Studienganges in verschiedene Modularten (Wahl-, Pflicht-, Aufbau-, Vertiefungsmodule usw.):**  
+  1. Die Zeile: `<l name="" min-cp="" max-cp="">` für jede Modulart einfügen.  
+  2. Informationen in die Anführungszeichen einfügen.  
+5. **Einfügen der einzelnen Module:**
+  1. Für jedes Modul wird die Zeile: `<m cp="" name="" pordnr=""/>` eingefügt.  
+  2. Informationen in die Anführungszeichen einsetzen.  
+6. **Schließen der einzelnen Abschnitte:**
+  1. Nach dem Eintragen der einzelnen Module den Ausdruck `</l>` verwenden um die Gliederung in Modularten aus Schritt 4 zu beenden.  
+  2. Zum Schließen des Studienganges den Ausdruck `</b>` verwenden.  
 **Beispiel Bachelor Wirtschaftschemie (nur Pflichtmodule eingefügt)**
 
 
@@ -1059,15 +1158,15 @@ Bei dem Erstellen neuer Studiengänge müssen beide Dokumente, Modulbaum und Mod
 
 
 ![](anleitung1.jpg)
-1. **Öffnen der Datei Moduldaten.**  
-2. **Scrollen bis zum Ende des 1. Abschnitts der Datei.**
-  Nachfolgende Eintragungen werden zwischen den Audrücken `<modules>` und `</modules>` in das Dokument eingetragen.
-3. **Erstellen eines Moduls:**
-  1. Die Zeile `<module title="" id="" elective-units="" type="" pordnr="" cp="">` einfügen (Bei der philosophischen Fakultät kann auf den Ausdruck `cp=""` verzichtet werden, da die Module nicht auf Credit Points basieren).  
-  2. Informationen in die Anführungszeichen einsetzen (siehe [Abkürzungsverzeichnis](#abkmd1)).  
-4. **Einfügen der einzelnen Kurse:**
-  1. Die Zeile `<abstract-unit title="" id="" type="" semester=""/>` für jeden Kurs einfügen.  
-  2. Informationen in die Anführungszeichen einsetzen.
+1. **Öffnen der Datei Moduldaten.**  
+2. **Scrollen bis zum Ende des 1. Abschnitts der Datei.**
+  Nachfolgende Eintragungen werden zwischen den Audrücken `<modules>` und `</modules>` in das Dokument eingetragen.
+3. **Erstellen eines Moduls:**
+  1. Die Zeile `<module title="" id="" elective-units="" type="" pordnr="" cp="">` einfügen (Bei der philosophischen Fakultät kann auf den Ausdruck `cp=""` verzichtet werden, da die Module nicht auf Credit Points basieren).  
+  2. Informationen in die Anführungszeichen einsetzen (siehe [Abkürzungsverzeichnis](#abkmd1)).  
+4. **Einfügen der einzelnen Kurse:**
+  1. Die Zeile `<abstract-unit title="" id="" type="" semester=""/>` für jeden Kurs einfügen.  
+  2. Informationen in die Anführungszeichen einsetzen.
 5. **Schließen des Moduls:**  
 Nach dem Eintragen aller Kurse wird das Modul durch den Ausdruck `</modules>` geschlossen.   
 
