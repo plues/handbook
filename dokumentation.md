@@ -72,13 +72,13 @@
 
 Das Planungswerkzeug für überschneidungsfreies Studieren besteht aus **vier Hauptbestandteilen**: 
  
-1. **Zwei XML-Dokumente ( Modulbaum und Moduldaten)** ([Download](https://github.com/plues/data/tree/develop/raw))  
+1. **Zwei XML-Dokumente ( Modulbaum und Moduldaten)** ([Download](https://github.com/plues/data/tree/2.3.0/raw))  
 
-2. **Mincer zum Zusammenfügen der Dokumente** ([Download](https://www3.hhu.de/stups/downloads/plues/mincer/mincer-2.0.0.exe))  
+2. **Mincer zum Zusammenfügen der Dokumente** ([Download](https://github.com/plues/mincer/releases/tag/2.1.0))  
 
-3. **SQlite-Datenbank** ([Download](https://www3.hhu.de/stups/downloads/plues/data/))  
+3. **SQlite-Datenbank** ([Download](https://github.com/plues/data/releases/tag/2.3.0))  
 
-4. **Hauptanwendung** ([Download](https://www3.hhu.de/stups/downloads/plues/plues/releases/))  
+4. **Hauptanwendung** ([Download](https://github.com/plues/plues/releases/tag/2.0.0))  
 
 Als Grundlage dienen zwei XML-Dokumente, der Modulbaum und die Moduldaten. Diese enthalten alle relevanten Informationen der einzelnen Kurse und Module eines Studienganges, sowie die genauen Veranstaltungszeiten. Die Anwendung mincer fügt diese beiden Dateien zu einer gemeinsamen SQlite- Datenbank zusammen, welche als Grundlage für die Hauptanwendung dient. Nachdem die SQlite-Datenbank von der Hauptanwendung geöffnet wurde, ist diese funktionsfähig.
 
@@ -103,7 +103,7 @@ Um ein vernünftiges Arbeiten mit dem Planungswerkzeug für überschneidungsfrei
 ### <a name="fa"></a> 2.1 Starten der Hauptanwendung und Einlesen der Daten
 
 
-Die Hauptanwendung wird durch die Datei **plues-2.0.0-PREVIEW2** gestartet. Nach dem Starten erscheint folgender Bildschirm:
+Die Hauptanwendung wird durch die Datei **plues-2.0.0** gestartet. Nach dem Starten erscheint folgender Bildschirm:
 
 
 ![](hauptanwendung1.jpg)
