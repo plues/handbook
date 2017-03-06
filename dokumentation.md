@@ -72,13 +72,13 @@
 
 Das Planungswerkzeug für überschneidungsfreies Studieren besteht aus **vier Hauptbestandteilen**: 
  
-1. **Zwei XML-Dokumente ( Modulbaum und Moduldaten)** ([Download](https://github.com/plues/data/tree/develop/raw))  
+1. **Zwei XML-Dokumente ( Modulbaum und Moduldaten)** ([Download](https://github.com/plues/data/tree/master/raw))  
 
-2. **Mincer zum Zusammenfügen der Dokumente** ([Windows](https://www3.hhu.de/stups/downloads/plues/mincer/mincer-2.2.0-SNAPSHOT.exe) [MacOs/Linux](https://www3.hhu.de/stups/downloads/plues/mincer/mincer-2.2.0-SNAPSHOT-standalone.jar))  
+2. **Mincer zum Zusammenfügen der Dokumente** ([Windows](https://www3.hhu.de/stups/downloads/plues/mincer/mincer-2.3.0.exe) [MacOs/Linux](https://www3.hhu.de/stups/downloads/plues/mincer/mincer-2.3.0-standalone.jar))  
 
-3. **SQlite-Datenbank** ([Download](https://github.com/plues/data/releases/tag/2.3.0))  
+3. **SQlite-Datenbank** ([Download](https://github.com/plues/data/releases/tag/2.4.0))  
 
-4. **Hauptanwendung** ([Download](https://github.com/plues/plues/releases/tag/2.0.0))  
+4. **Hauptanwendung** ([Download](https://github.com/plues/plues/releases/tag/2.1.0))  
 
 Als Grundlage dienen zwei XML-Dokumente, der Modulbaum und die Moduldaten. Diese enthalten alle relevanten Informationen der einzelnen Kurse und Module eines Studienganges, sowie die genauen Veranstaltungszeiten. Die Anwendung mincer fügt diese beiden Dateien zu einer gemeinsamen SQlite- Datenbank zusammen, welche als Grundlage für die Hauptanwendung dient. Nachdem die SQlite-Datenbank von der Hauptanwendung geöffnet wurde, ist diese funktionsfähig.
 
@@ -103,7 +103,7 @@ Um ein vernünftiges Arbeiten mit dem Planungswerkzeug für überschneidungsfrei
 ### <a name="fa"></a> 2.1 Starten der Hauptanwendung und Einlesen der Daten
 
 
-Die Hauptanwendung wird durch die Datei **plues-2.1.0-SNAPSHOT** gestartet. Nach dem Starten erscheint folgender Bildschirm:
+Die Hauptanwendung wird durch die Datei **plues-2.1.0** gestartet. Nach dem Starten erscheint folgender Bildschirm:
 
 
 ![](hauptanwendung1.jpg)
@@ -1158,7 +1158,8 @@ Bei dem Erstellen neuer Studiengänge müssen beide Dokumente, Modulbaum und Mod
 
 
 ![](anleitung1.jpg)
-1. **Öffnen der Datei Moduldaten.**  
+
+1. **Öffnen der Datei Moduldaten.**  
 2. **Scrollen bis zum Ende des 1. Abschnitts der Datei.**
   Nachfolgende Eintragungen werden zwischen den Audrücken `<modules>` und `</modules>` in das Dokument eingetragen.
 3. **Erstellen eines Moduls:**
@@ -1168,7 +1169,8 @@ Bei dem Erstellen neuer Studiengänge müssen beide Dokumente, Modulbaum und Mod
   1. Die Zeile `<abstract-unit title="" id="" type="" semester=""/>` für jeden Kurs einfügen.  
   2. Informationen in die Anführungszeichen einsetzen.
 5. **Schließen des Moduls:**  
-Nach dem Eintragen aller Kurse wird das Modul durch den Ausdruck `</modules>` geschlossen.   
+Nach dem Eintragen aller Kurse wird das Modul durch den Ausdruck `</modules>` geschlossen.  
+ 
 
 **Beispiel Modul**
 
