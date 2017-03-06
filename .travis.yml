@@ -10,9 +10,9 @@ before_script:
 script:
 - make travis
 after_success:
-  - cp handbook-1.3.0.pdf latest.pdf
-  - cp handbook-1.3.0.html latest.html
-  - travis-custom-deploy sftp handbook-1.3.0.pdf handbook-1.3.0.html latest.pdf latest.html
+  - cp handbook-1.4.0-dev.pdf latest.pdf
+  - cp handbook-1.4.0-dev.html latest.html
+  - travis-custom-deploy sftp handbook-1.4.0-dev.pdf handbook-1.4.0-dev.html latest.pdf latest.html
 notification:
   email:
     on_success: never
