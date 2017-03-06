@@ -74,7 +74,7 @@ Das Planungswerkzeug für überschneidungsfreies Studieren besteht aus **vier Ha
  
 1. **Zwei XML-Dokumente ( Modulbaum und Moduldaten)** ([Download](https://github.com/plues/data/tree/master/raw))  
 
-2. **Mincer zum Zusammenfügen der Dokumente** ([Windows](https://www3.hhu.de/stups/downloads/plues/mincer/mincer-2.3.0.exe) [MacOs/Linux](https://www3.hhu.de/stups/downloads/plues/mincer/mincer-2.3.0-standalone.jar))  
+2. **Mincer zum Zusammenfügen der Dokumente** ([Windows](https://www3.hhu.de/stups/downloads/plues/mincer/mincer-2.2.0.exe) [MacOs/Linux](https://www3.hhu.de/stups/downloads/plues/mincer/mincer-2.2.0-standalone.jar))  
 
 3. **SQlite-Datenbank** ([Download](https://github.com/plues/data/releases/tag/2.4.0))  
 
