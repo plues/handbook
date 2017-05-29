@@ -1062,9 +1062,9 @@ Ende: **`</modules>`**
 Start: **`<module [...]>`**  
 Ende: **`</module>`**  
 
-**Kurse:** 
+**Konkrete Kursausprägung:** 
 
-Start: **`<abstract-unit [...]>`**  
+Start: **`<abstract-unit [...]`**  
 Ende: **`/>`**
 
 
@@ -1129,7 +1129,7 @@ Ende: **`</group>`**
 Start: **`<session [...]`**  
 Ende: **`/>`**  
 
-**Kurs-IDs:** 
+**Konkrete Kursausprägung definiert mit Attribut `id` :** 
 
 Start: **`<abstract-unit [...]`**  
 Ende: **`/>`**  
@@ -1138,7 +1138,7 @@ Ende: **`/>`**
 ![](start-ende,moduldaten2.jpg) 
 
 
-**Für weitere Informationen zu den Attributen einzelner Tags siehe auch: [PlüS Data Documentation (English)](https://github.com/plues/data/blob/master/docs.md) **
+**Für weitere Informationen zu den Definitionen einzelner Tags siehe auch: [PlüS Data Documentation (English)](https://github.com/plues/data/blob/master/docs.md) **
 
 
 ## <a name="c"></a> 5. Eingabe neuer Daten  
