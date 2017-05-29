@@ -778,7 +778,25 @@ Die in dieser Kategorie aufgelisteten Studiengänge enthalten zwei oder mehrere 
 ### <a name="fdb"></a> Bearbeiten
 
 
-####Wähle Timeout
+####Verschiebung rückgängig machen
+
+
+Die letzte Verschiebung einer Session in der Studienplanansicht wird rückgängig gemacht. Diese Funktion kann direkt mittels der Tastenkombination `STRG+Z` ausgeführt werden.
+
+
+####Alle Verschiebungen rückgängig machen
+
+
+Es werden alle in dem Änderungsprotokoll vorhandenen Verschiebung in der Studienplanansicht rückgängig gemacht. Dies kann je nach Anzahl der Verschiebungen einen kurzen Moment dauern.
+
+
+####Verschiebung wiederherstellen
+
+
+Die letzte Verschiebung einer Session in der Studienplanansicht wird wiederhergestellt. Diese Funktion kann direkt mittels der Tastenkombination `STRG+SHIFT+Z` ausgeführt werden.
+
+
+####Wähle Zeitlimit
 
 
 Die Funktion `Wähle Timeout` ist unter dem Punkt `Bearbeiten` in der obersten Zeile aufrufbar. Mit ihr wird das Zeitlimit festgelegt, mit der das Programm die Studierbarkeit von Studiengängen berechnet. Die Standarddauer ist hierbei  auf eine Minute festgelegt. Sollte ein Studiengang nicht in einer Minute berechnet werden können, lässt sich die Dauer mit dieser Funktion anpassen.
