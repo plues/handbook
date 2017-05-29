@@ -1150,10 +1150,10 @@ Ende: **`/>`**
 Bei dem Erstellen neuer Studiengänge müssen beide Dokumente, Modulbaum und Moduldaten, angepasst werden.
 
 
-##### Eintragung in die Modulgliederung des Dokuments  Modulbaum
+##### Eintragung in die Modulgliederung des Modulbaum Dokuments
 
-1. **Öffnen Datei Modulbaum.**
-2. **Scrollen bis vorletze Zeile.**  
+1. **Öffnen der Modulbaum Datei.**
+2. **Scrollen bis in die vorletzte Zeile.**  
 3. **Erstellen des Studiengangs:**  
   1. Ausdruck als vorletzte Zeile einfügen: `<b cp="" abschl="" stg="" kzfa="" pversion="" name="">` (bei der philosophischen Fakultät kann auf den Ausdruck `cp=""` verzichtet werden, da keine Credit Points angegeben werden).  
   2. Informationen über den Studiengang in die Anführungszeichen einsetzen (siehe [Abkürzungsverzeichnis](#abkmb)).  
@@ -1165,8 +1165,16 @@ Bei dem Erstellen neuer Studiengänge müssen beide Dokumente, Modulbaum und Mod
   1. Für jedes Modul wird die Zeile: `<m cp="" name="" pordnr=""/>` eingefügt.  
   2. Informationen in die Anführungszeichen einsetzen.  
 6. **Schließen der einzelnen Abschnitte:**
-  1. Nach dem Eintragen der einzelnen Module den Ausdruck `</l>` verwenden um die Gliederung in Modularten aus Schritt 4 zu beenden.  
+  1. Nach dem Eintragen der einzelnen Module den Ausdruck `</l>` verwenden um die Gliederung in Modularten aus Schritt 4 zu beenden. 
   2. Zum Schließen des Studienganges den Ausdruck `</b>` verwenden.  
+7. **Optional für Hauptfächer: Einfügen valider Nebenfächer**
+  1. Falls notwendig können vor oder nach der level Definition Nebenfächer angegeben werden, sofern der Kurs ein Hauptfach ist. 
+  2. Hierzu wird ein `<minors>` Tag geöffnet. 
+  3. Die einzelnen Nebenfächer werden jeweils durch ein `<minor stg="" pversion=""/>` Tag definiert, wobei die Attribute dem Nebenfach entsprechend ausgefüllt werden müssen.
+  4. Letztlich wird das `</minors>` Tag geschlossen.
+  5. **Hinweis:** Es darf nur ein `<minors> [...] </minors>` Tag pro Kurs Definition geben in dem alle Nebenfächer definiert sind. Oder entsprechend ohne ein solches Tag, falls keine Nebenfächer existieren.
+
+
 **Beispiel Bachelor Wirtschaftschemie (nur Pflichtmodule eingefügt)**
 
 
@@ -1182,7 +1190,7 @@ Bei dem Erstellen neuer Studiengänge müssen beide Dokumente, Modulbaum und Mod
 2. **Scrollen bis zum Ende des 1. Abschnitts der Datei.**
   Nachfolgende Eintragungen werden zwischen den Audrücken `<modules>` und `</modules>` in das Dokument eingetragen.
 3. **Erstellen eines Moduls:**
-  1. Die Zeile `<module title="" id="" elective-units="" type="" pordnr="" cp="">` einfügen (Bei der philosophischen Fakultät kann auf den Ausdruck `cp=""` verzichtet werden, da die Module nicht auf Credit Points basieren).  
+  1. Die Zeile `<module title="" id="" elective-units="" type="" pordnr="" cp="" bundled="">` einfügen (Bei der philosophischen Fakultät kann auf den Ausdruck `cp=""` verzichtet werden, da die Module nicht auf Credit Points basieren).  
   2. Informationen in die Anführungszeichen einsetzen (siehe [Abkürzungsverzeichnis](#abkmd1)).  
 4. **Einfügen der einzelnen Kurse:**
   1. Die Zeile `<abstract-unit title="" id="" type="" semester=""/>` für jeden Kurs einfügen.  
