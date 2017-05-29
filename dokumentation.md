@@ -922,7 +922,7 @@ Das XML-Dokument Modulbaum bietet eine erste Übersicht über die verfügbaren M
 ![](gliederung,modulbaum.jpg)
 
 
-#### <a name="abkmb"></a> Abkürzungsverzeichnis:
+**<a name="abkmb"></a> Abkürzungsverzeichnis:**
 
 
 **short-name:** Abkürzung der Fakultät (z.B. wiwi)   
@@ -949,7 +949,7 @@ Das XML-Dokument Modulbaum bietet eine erste Übersicht über die verfügbaren M
 
 
 
-#####Zusatz Philosophische Fakultät
+**Zusatz Philosophische Fakultät**
 
 
 **min:** Mindestanzahl an zu belegenden Modulen für Studienabschluss  
@@ -957,37 +957,53 @@ Das XML-Dokument Modulbaum bietet eine erste Übersicht über die verfügbaren M
 **max:** Maximal mögliche Anzahl an zu belegenden Modulen
 
 
-#####Zusatz Wirtschaftswissenschaften- und Informatik
+**Zusatz Wirtschaftswissenschaften- und Informatik**
 
 **min-cp:** Mindestanzahl an Credit Points die zum Abschließen des Studiums benötigt werden  
 
 **max-cp:** Maximale Anzahl an Credit Points die erreicht werden kann 
 
 
+**Definition eines Nebenfachs mittels `<minor>`**
+ 
+Die Nebenfächer eines Hauptfachs werden gebündelt innerhalb eines pro Kurs eindeutigen `<minors>` Tag definiert.
+Als Attribute für `<minor>` müssen **stg** und **pversion** definiert werden.
+
+
 ![](abk-modulbaum.jpg)
 
 
-####Start- und Endausdrücke
+**Start- und Endausdrücke**
 
 
 **Datei Modulbaum:** 
 
-Start: **`<ModulBaum`**  
+Start: **`<ModulBaum [...]>`**   
 Ende: **`</ModulBaum>`**  
 
 **Studiengänge:** 
 
-Start: **`<b`**  
+Start: **`<b [...]>`**  
 Ende: **`</b>`**  
+
+**Menge an Nebenfächern:** 
+
+Start: **`<minors>`**   
+Ende: **`</minors>`**  
+
+**Einzelnes Nebenfach:** 
+
+Start: **`<minor [...]`**   
+Ende: **`/>`**  
 
 **Wahl-und Pflichtmodule:** 
 
-Start: **`<l`**   
+Start: **`<l [...]>`**    
 Ende: **`</l>`**  
 
 **Module:** 
 
-Start: **`<m`**  
+Start: **`<m [...]`**  
 Ende: **`/>`**
 
 
@@ -997,7 +1013,7 @@ Ende: **`/>`**
 ### <a name="bc"></a>4.3 Moduldaten Kursgliederung (1.Hälfte)
 
 
-####Inhaltliche Gliederung:
+**Inhaltliche Gliederung:**
 
 
 In dem XML-Dokument Moduldaten wird die Gliederung des Modulbaums fortgeführt und erweitert. Zuerst erfolgt die Gliederung in die einzelnen **Studiengänge(1)** und die darin enthaltenen **Module(2)**. Diese wiederum unterteilen sich in die **Kurse(3)** aus denen sich das Modul zusammensetzt.
@@ -1006,7 +1022,7 @@ In dem XML-Dokument Moduldaten wird die Gliederung des Modulbaums fortgeführt u
 ![](gliederung,moduldaten.jpg)
 
 
-#### <a name="abkmmd1"></a> Abkürzungsverzeichnis:
+**<a name="abkmmd1"></a> Abkürzungsverzeichnis:**
 
 
 **title:** Name des Moduls/Kurses   
@@ -1023,31 +1039,32 @@ In dem XML-Dokument Moduldaten wird die Gliederung des Modulbaums fortgeführt u
 
 **semester:** Semester, in denen der Kurs stattfindet; findet der Kurs in mehreren Semestern statt, werden diese durch ein Komma getrennt (z.B. semester="3,5")
 
+**bundled:** Ein boolscher Wert. Der Wert ist **true**, wenn alle konkreten Ausprägungen (abstract units) dieses Moduls innerhalb eines Semesters belegt werden müssen. Andernfalls ist der Wert auf **false** gesetzt.
 
 ![](abk-moduldaten.jpg)
 
 
-####Start- und Endausdrücke
+**Start- und Endausdrücke**
 
 
 **Datei als Ganzes:** 
 
-Start: **`<data`**   
+Start: **`<data>`**   
 Ende: **`</data>`**   
 
 **Modulübersicht (1. Hälfte):** 
 
-Start: **`<modules`**  
+Start: **`<modules>`**  
 Ende: **`</modules>`**  
 
 **Module:** 
 
-Start: **`<module`**  
+Start: **`<module [...]>`**  
 Ende: **`</module>`**  
 
 **Kurse:** 
 
-Start: **`<abstract-unit>`**  
+Start: **`<abstract-unit [...]>`**  
 Ende: **`/>`**
 
 
@@ -1057,7 +1074,7 @@ Ende: **`/>`**
 ### <a name="bd"></a>4.4 Moduldaten Veranstaltungsverzeichnis (2.Hälfte)
 
 
-####Inhaltliche Gliederung
+**Inhaltliche Gliederung**
 
 
 Die zweite Hälfte des XML-Dokuments Moduldaten ist in die einzelnen **Studiengänge(1)** untergliedert. Pro Studiengang sind alle verfügbaren **Kurse(2)** aufgelistet, welche sich in die einzelnen **Gruppen(3)** unterteilen, aus denen sich der Kurs zusammensetzt. Zu jeder Gruppe werden die genauen **Termine(4)** der Veranstaltung angegeben.
@@ -1066,7 +1083,7 @@ Die zweite Hälfte des XML-Dokuments Moduldaten ist in die einzelnen **Studieng�
 ![](gliederung,moduldaten2.jpg) 
 
 
-#### <a name="abkmd2"></a> Abkürzungsverzeichnis
+**<a name="abkmd2"></a> Abkürzungsverzeichnis**
 
 
 **id (zu Beginn eines Kurses):** festgelegte, **eindeutige** Zahl ohne ihnaltliche Bedeutung, dient der Identifizierung des Moduls (jede ID darf nur einmal benutzt werden)  
@@ -1089,37 +1106,39 @@ Die zweite Hälfte des XML-Dokuments Moduldaten ist in die einzelnen **Studieng�
 ![](abk-moduldaten2.jpg)
 
 
-####Start- und Endausdrücke
+**Start- und Endausdrücke**
 
 
-**Veranstaltungsverzeichnis (2. Hälfte):** 
+**Menge an Kursen:** 
 
-Start: **`<units`**  
+Start: **`<units>`**  
 Ende: **`</units>`**  
 
-**Kurse:** 
+**Einzelner Kurs:** 
 
-Start: **`<unit`**  
-Ende: **`</units>`**  
+Start: **`<unit [...]>`**  
+Ende: **`</unit>`**  
 
 **Gruppen:** 
 
-Start: **`<groups`**  
-Ende: **`</groups>`**  
+Start: **`<group>`**  
+Ende: **`</group>`**  
 
 **Veranstaltungszeiten:** 
 
-Start: **`<sessions`**  
+Start: **`<session [...]`**  
 Ende: **`/>`**  
 
 **Kurs-IDs:** 
 
-Start: **`abstract-unit`**  
+Start: **`<abstract-unit [...]`**  
 Ende: **`/>`**  
 
 
 ![](start-ende,moduldaten2.jpg) 
 
+
+**Für weitere Informationen zu den Attributen einzelner Tags siehe auch: [PlüS Data Documentation (English)](https://github.com/plues/data/blob/master/docs.md) **
 
 
 ## <a name="c"></a> 5. Eingabe neuer Daten  
