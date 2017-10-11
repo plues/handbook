@@ -175,8 +175,8 @@ Die Funktion Studienplanansicht ermöglicht es einzelne Veranstaltungen zu versc
 
 
 Auf der rechten Seite ist die Studienplanansicht abgebildet. In dieser sind alle Kurse der Fakultät aufgelistet und in ihre jeweiligen Zeitslots unterteilt.
-Auf der linken Seite der Funktion können die Filter ausgewählt, sowie die Studierbarkeit einzelner Studiengänge kontrolliert, werden. Um zwischen den Filtern und der Studiengangkontrolle zu wechseln werden die beiden buttons `check`und `filter` auf der linken Seite der Funktion benutzt (siehe Abbildung). 
-Durch weitere Klicks auf die buttons `check`und `filter`,können die Filter und das Menü zur Kontrolle der Studiengänge ausgeblendet und wieder eingeblendet werden. 
+Auf der linken Seite der Funktion können die Filter ausgewählt, sowie die Studierbarkeit einzelner Studiengänge kontrolliert, werden. Um zwischen den Filtern und der Studiengangkontrolle zu wechseln werden die beiden buttons `check`und `filter` auf der linken Seite der Funktion benutzt (siehe Abbildung).
+Durch weitere Klicks auf die buttons `check`und `filter`,können die Filter und das Menü zur Kontrolle der Studiengänge ausgeblendet und wieder eingeblendet werden.
 
 
 ![Die Seitenleiste der Studienplanansicht mit Filtern für die Ansicht und einer Sektion für die Überprüfung einzelner Studiengänge.](images/stundenplanansicht1.png)
@@ -196,7 +196,7 @@ Die Kurse in der Studienplanansicht können sowohl nach Studiengängen, als auch
 4. **Nur units der ausgewählten Studiengänge:** Es werden nur Kurse der in der oberen Hälfte ausgewählten Studiengänge angezeigt.
 
 
-![Die Seitenleiste mit Filtern für die Studienplanansicht.](images/stundenplanansicht2.png) 
+![Die Seitenleiste mit Filtern für die Studienplanansicht.](images/stundenplanansicht2.png)
 
 
 **Beachte:** Die Filter-Optionen beeinflussen nur die aufgelisteten Kurse im linken unteren Abschnitt der Funktion (siehe Abbildung). Um die Studienplanansicht auf der rechten Seite zu filtern, müssen einzelne Studiengänge oder Kurse auf der linken Seite ausgewählt werden.
@@ -242,14 +242,14 @@ Um sich in der Studienplanansicht nähere Informationen zu einem Kurs anzeigen z
 
 
 Im Abschnitt **Kurs-Verteilung** sind alle Studiengänge aufgelistet, in welchen der ausgewählte Kurs vorkommt. Zusätzlich ist noch das Modul angegeben, zu dem der Kurs gehört, sowie das Semester in dem er stattfindet und ob es sich um einen Pflicht- oder Wahlkurs handelt.
- 
 
-#### Überprüfung der Studierbarkeit 
+
+#### Überprüfung der Studierbarkeit
 
 
 1. Klick auf den Button `Check` im linken oberen Abschnitt der Funktion.
 
-2. Auswählen des zu überprüfenden Studiengangs oder Faches. 
+2. Auswählen des zu überprüfenden Studiengangs oder Faches.
 
 3. Klick auf den Button `Prüfe Erfüllbarkeit`.
 
@@ -262,39 +262,57 @@ Nun wird die Studierbarkeit des gewählten Studienganges berechnet. Hierbei wird
 ##### Studierbare Studiengänge
 
 
-Studierbare Studiengänge können nun in der Studienplanansicht hervorgehoben werden. Hierfür wird die Funktion `Im Studienplan hervorheben` ausgewählt und mit einem Klick auf den Button `Los` bestätigt. Nun wählt das Programm automatisch den entsprechenden Filter aus, sodass nur noch die Kurse des entsprechenden Studiengangs angezeigt werden.
+Studierbare Studiengänge können nun in der Studienplanansicht hervorgehoben
+werden. Hierfür wird die Funktion `Im Studienplan hervorheben` ausgewählt und
+mit einem Klick auf den Button `Los` bestätigt. Nun wählt das Programm
+automatisch den entsprechenden Filter aus, sodass nur noch die Kurse des
+entsprechenden Studiengangs angezeigt werden.
 
-Des Weiteren kann der Studiengang erneut, unter der Berücksichtigung spezieller Kurse, berechnet werden. Hierfür wird die Funktion `Partiellen Studienplan generieren` ausgewählt und mit einen Klick auf den Button `Los` bestätigt. Nun leitet einen das Programm zu der Hauptfunktion [Partielle Studienpläne](#fbc) weiter.
+Des Weiteren kann der Studiengang erneut, unter der Berücksichtigung spezieller
+Kurse, berechnet werden. Hierfür wird die Funktion `Partiellen Studienplan
+generieren` ausgewählt und mit einen Klick auf den Button `Los` bestätigt. Nun
+leitet einen das Programm zu der Hauptfunktion [Partielle Studienpläne](#fbc)
+weiter.
 
 
 ##### Nicht studierbare Studienänge
 
- 
-Bei Studiengängen, die aufgrund von Konflikten nicht Studierbar sind, können nun die Konfliktsitzungen berechnet werden.
+
+Bei Studiengängen, die aufgrund von Konflikten nicht Studierbar sind, können
+nun die Konfliktsitzungen berechnet werden.
 
 1. Auswählen der Funktion `Konflikt Bestimmen`. 
 
 2. Klick auf den Button `Los`.
 
-Die Konfliktsitzungen des Studieganges werden daraufhin berechnet und angezeigt. Diese können durch einen Klick auf den Button `Konflikte hervorheben`, in der Studienplanansicht markiert werden.
+Die Konfliktsitzungen des Studieganges werden daraufhin berechnet und
+angezeigt. Diese können durch einen Klick auf den Button `Konflikte
+hervorheben`, in der Studienplanansicht markiert werden.
 
 
 ![Darstellung eines Konflikts in der Seitenleiste der Studienplanansicht.](images/stundenplanansicht5.png)
 
 
-Bei markierten Konflikten wird sowohl der Zeitslot, in dem der Konflikt liegt, rot umrandet, als auch die entsprechenden Konfliktkurse rot hervorgehoben. Des Weiteren werden noch die Semester hervorgehoben, in denen die Konfliktkurse stattfinden.
+Bei markierten Konflikten wird sowohl der Zeitslot, in dem der Konflikt liegt,
+rot umrandet, als auch die entsprechenden Konfliktkurse rot hervorgehoben. Des
+Weiteren werden noch die Semester hervorgehoben, in denen die Konfliktkurse
+stattfinden.
 
 
 ![Darstellung eines Konflikts in der Studienplanansicht.](images/stundenplanansicht6.jpg)
 
 
-Sobald ein Konflikt hervorgehoben wurde, erscheint neben den Button `Prüfe Erfüllbarkeit` ein weiterer Button mit der Bezeichnung `Hebe Konflikte nicht hervor`. Hiermit kann die Hervorhebung rückgängig gemacht werden.
+Sobald ein Konflikt hervorgehoben wurde, erscheint neben den Button `Prüfe
+Erfüllbarkeit` ein weiterer Button mit der Bezeichnung `Hebe Konflikte nicht
+hervor`. Hiermit kann die Hervorhebung rückgängig gemacht werden.
 
 
 ##### Generell nicht studierbare Studiengänge
 
 
-Mit generell nicht studiebaren Studiengängen kann nicht weiter gearbeitet werden. Sie können nur, durch einen Klick auf den Button `Los`, entfernt werden.
+Mit generell nicht studiebaren Studiengängen kann nicht weiter gearbeitet
+werden. Sie können nur, durch einen Klick auf den Button `Los`, entfernt
+werden.
 
 
 #### Weitere Funktionen
@@ -303,13 +321,19 @@ Mit generell nicht studiebaren Studiengängen kann nicht weiter gearbeitet werde
 ##### Studienplanansicht ändern
 
 
-Durch die Funktion `Ansicht` in der oberen Leiste kann gewählt werden, ob in der Studienplanansicht die `Unit Title`, die `UnitID/Gruppen` oder die `abstrakten Unit Schlüssel` angezeigt werden. Für nähere Informationen [hier](#fdc) klicken.
+Durch die Funktion `Ansicht` in der oberen Leiste kann gewählt werden, ob in
+der Studienplanansicht die `Unit Title`, die `UnitID/Gruppen` oder die
+`abstrakten Unit Schlüssel` angezeigt werden. Für nähere Informationen
+[hier](#fdc) klicken.
 
 
 ##### Änderungen speichern
 
 
-Veranstaltungsverschiebungen, die Mithilfe der Studienplanansicht vorgenommen wurden, können mithilfe der Funktionen `Speichern` und `Speichern unter`, welche in der obersten Leiste unter dem Feld `Datei`aufgerufen werden können, gespeichert werden. Für nähere Informationen klicken sie [hier](#fcb).
+Veranstaltungsverschiebungen, die Mithilfe der Studienplanansicht vorgenommen
+wurden, können mithilfe der Funktionen `Speichern` und `Speichern unter`,
+welche in der obersten Leiste unter dem Feld `Datei`aufgerufen werden können,
+gespeichert werden. Für nähere Informationen klicken sie [hier](#fcb).
 
 
 ### <a name="fbb"></a>PDF-Studienpläne
@@ -318,7 +342,11 @@ Veranstaltungsverschiebungen, die Mithilfe der Studienplanansicht vorgenommen wu
 #### Funktionsbeschreibung
 
 
-Die Funktion PDF-Studienpläne berechnet Studienverlaufspläne von ausgewählten Fächerkombinationen. Hierdurch kann die Studierbarkeit einzelner Fächerkombinationen leicht überprüft werden. Des Weiteren beinhaltet der Studienverlaufsplan mögliche Studienpläne für die einzelnen Semester und bietet damit eine detailierte Übersicht des Studienganges.
+Die Funktion PDF-Studienpläne berechnet Studienverlaufspläne von ausgewählten
+Fächerkombinationen. Hierdurch kann die Studierbarkeit einzelner
+Fächerkombinationen leicht überprüft werden. Des Weiteren beinhaltet der
+Studienverlaufsplan mögliche Studienpläne für die einzelnen Semester und bietet
+damit eine detailierte Übersicht des Studienganges.
 
 
 #### Bedienung
@@ -330,17 +358,21 @@ Die Funktion PDF-Studienpläne berechnet Studienverlaufspläne von ausgewählten
 
 3. Generieren des Studienverlaufsplans durch Klick auf den Button `Generieren`.
 
-Nun berechnet das Programm den Studienverlaufsplan für die ausgewählte Fächerkombination. Dies sollte nur einen kurzen Moment dauern. Es gibt drei mögliche fälle, die sich nach dem Berechnen es Studienverlaufsplanes einstellen können; der Studiengang ist studierbar, es kam zu einer Zeitüberschreitung beim Berechnen oder der Studiengang ist nicht studierbar.
+Nun berechnet das Programm den Studienverlaufsplan für die ausgewählte
+Fächerkombination. Dies sollte nur einen kurzen Moment dauern. Es gibt drei
+mögliche fälle, die sich nach dem Berechnen es Studienverlaufsplanes einstellen
+können; der Studiengang ist studierbar, es kam zu einer Zeitüberschreitung beim
+Berechnen oder der Studiengang ist nicht studierbar.
 
 
 ![Ansicht zur Generierung einzelner PDF-Studienpläne.](images/pdfstudienplaene.png)
 
 
-##### 1. Fall: Fächerkombination ist studierbar 
+##### 1. Fall: Fächerkombination ist studierbar
 
 
-Es erscheint ein grüner Kasten mit einem Haken.   
-Nun gibt es mehrere Möglichkeiten:  
+Es erscheint ein grüner Kasten mit einem Haken.
+Nun gibt es mehrere Möglichkeiten:
 
 1. **Anzeigen:** Studienverlaufsplan wird als PDF angezeigt.
 
@@ -383,7 +415,13 @@ Es erscheint ein roter Kasten mit einem Kreuz. Nun hat man folgende Möglichkeit
 #### Funktionsbeschreibung
 
 
-Die Funktion Partielle Studienpläne ermöglicht eine **Berücksichtigung konkreter Module und Kurse** bei der Erstellung eines Studienverlaufsplanes. Es können Studienverlaufspläne für verschiedene Fächerkombinationen berechnet werden. Hierbei ist es möglich einzelne Module und Kurse auszuwählen, die im Studienverlaufsplan enthalten sein sollen. Dadurch kann geprüft werden, ob eine bestimmte Fächerkombination studierbar ist, unter der Voraussetzung, dass sie bestimmte Veranstaltungen beinhaltet. 
+Die Funktion Partielle Studienpläne ermöglicht eine **Berücksichtigung
+konkreter Module und Kurse** bei der Erstellung eines Studienverlaufsplanes. Es
+können Studienverlaufspläne für verschiedene Fächerkombinationen berechnet
+werden. Hierbei ist es möglich einzelne Module und Kurse auszuwählen, die im
+Studienverlaufsplan enthalten sein sollen. Dadurch kann geprüft werden, ob eine
+bestimmte Fächerkombination studierbar ist, unter der Voraussetzung, dass sie
+bestimmte Veranstaltungen beinhaltet. 
 
 
 #### Bedienung
@@ -421,9 +459,13 @@ Sollte statt dem grünen Kasten ein roter Kasten mit einem Kreuz erscheinen, so 
 #### Funktionsbeschreibung
 
 
-Unter der Funktion `Alle Studienpläne` werden die Studienverlaufspläne aller  möglichen Fächerkombinationen an der Fakultät mit einem Klick berechnet.
-Die berechneten Studienverlaufspläne könnnen daraufhin als PDF und/oder Zip-Datei auf dem Computer gespeichert werden. 
-Die Funktion ermöglicht es schnell und unkompliziert eine umfassende Übersicht, in Form der einzelnen Studienpläne für jedes Semester, über alle Studiengänge der Fakultät zu erhalten.
+Unter der Funktion `Alle Studienpläne` werden die Studienverlaufspläne aller
+möglichen Fächerkombinationen an der Fakultät mit einem Klick berechnet.
+Die berechneten Studienverlaufspläne könnnen daraufhin als PDF und/oder
+Zip-Datei auf dem Computer gespeichert werden.  Die Funktion ermöglicht es
+schnell und unkompliziert eine umfassende Übersicht, in Form der einzelnen
+Studienpläne für jedes Semester, über alle Studiengänge der Fakultät zu
+erhalten.
 
 
 #### Bedienung  
