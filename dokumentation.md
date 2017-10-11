@@ -1643,7 +1643,7 @@ Solch eine Fehlermeldung entsteht, wenn bestimmte Studiengänge oder Module nich
 [raw-data]: https://github.com/plues/data/tree/develop/raw
 [mincer-windows-download]: https://www3.hhu.de/stups/downloads/plues/mincer/mincer-3.3.0-SNAPSHOT.exe
 [mincer-jar-download]: https://www3.hhu.de/stups/downloads/plues/mincer/mincer-3.3.0-SNAPSHOT-standalone.jar
-[data-release]: https://github.com/plues/data/releases/tag/3.0.0
-[plues-release]: https://github.com/plues/plues/releases/tag/2.6.0
+[data-release]: https://github.com/plues/data/releases/tag/3.1.0
+[plues-release]: https://github.com/plues/plues/releases/tag/2.7.0
 [java-download]: http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
 [plues-data-docs]: https://github.com/plues/data/blob/master/docs.md
