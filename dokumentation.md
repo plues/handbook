@@ -70,15 +70,15 @@
 ### <a name="aa"></a> 1.1 Bestandteile und Aufbau
 
 
-Das Planungswerkzeug für überschneidungsfreies Studieren besteht aus **vier Hauptbestandteilen**: 
- 
-1. **Zwei XML-Dokumente ( Modulbaum und Moduldaten)** ([Download](https://github.com/plues/data/tree/develop/raw))  
+Das Planungswerkzeug für überschneidungsfreies Studieren besteht aus **vier Hauptbestandteilen**:
 
-2. **Mincer zum Zusammenfügen der Dokumente** ([Windows](https://www3.hhu.de/stups/downloads/plues/mincer/mincer-3.2.0-SNAPSHOT.exe) [MacOs/Linux](https://www3.hhu.de/stups/downloads/plues/mincer/mincer-3.2.0-SNAPSHOT-standalone.jar))  
+1. **Zwei XML-Dokumente (Modulbaum und Moduldaten)** ([Download][raw-data])
 
-3. **SQlite-Datenbank** ([Download](https://github.com/plues/data/releases/tag/3.0.0))  
+2. **Mincer zum Zusammenfügen der Dokumente** ([Windows][mincer-windows-download] [MacOs/Linux][mincer-jar-download])
 
-4. **Hauptanwendung** ([Download](https://github.com/plues/plues/releases/tag/2.5.0))  
+3. **SQlite-Datenbank** ([Download][data-release])
+
+4. **Hauptanwendung** ([Download][plues-release])
 
 Als Grundlage dienen zwei XML-Dokumente, der Modulbaum und die Moduldaten. Diese enthalten alle relevanten Informationen der einzelnen Kurse und Module eines Studienganges, sowie die genauen Veranstaltungszeiten. Die Anwendung mincer fügt diese beiden Dateien zu einer gemeinsamen SQlite- Datenbank zusammen, welche als Grundlage für die Hauptanwendung dient. Nachdem die SQlite-Datenbank von der Hauptanwendung geöffnet wurde, ist diese funktionsfähig.
 
@@ -94,7 +94,7 @@ Um diese Ziele zu erreichen bietet das Planungswerkzeug eine vollständige Über
 ### <a name="ac"></a> 1.3 Systemanforderungen
 
 
-Um ein vernünftiges Arbeiten mit dem Planungswerkzeug für überschneidungsfreies Studieren zu gewährleisten wird ein Rechner mit mindestens **4 Gigabyte Arbeitsspeicher** und einem **64-bit Betriebssystem** benötigt. Des Weiteren ist das Programm **java 8 64-bit**   ([Download](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)) erforderlich.
+Um ein vernünftiges Arbeiten mit dem Planungswerkzeug für überschneidungsfreies Studieren zu gewährleisten wird ein Rechner mit mindestens **4 Gigabyte Arbeitsspeicher** und einem **64-bit Betriebssystem** benötigt. Des Weiteren ist das Programm **java 8 64-bit**   ([Download][java-download]) erforderlich.
 
 
 # 2. Umgang mit der Hauptanwendung
@@ -1175,7 +1175,7 @@ Ende: **`/>`**
 ![](images/start-ende,moduldaten2.jpg) 
 
 
-**Für weitere Informationen zu den Definitionen einzelner Tags siehe auch: [PlüS Data Documentation (English)](https://github.com/plues/data/blob/master/docs.md) **
+**Für weitere Informationen zu den Definitionen einzelner Tags siehe auch: [PlüS Data Documentation (English)][plues-data-docs] **
 
 
 ## <a name="c"></a> 5. Eingabe neuer Daten  
@@ -1598,4 +1598,10 @@ Solch eine Fehlermeldung entsteht, wenn bestimmte Studiengänge oder Module nich
 
 
 
-
+[raw-data]: https://github.com/plues/data/tree/develop/raw
+[mincer-windows-download]: https://www3.hhu.de/stups/downloads/plues/mincer/mincer-3.2.0-SNAPSHOT.exe
+[mincer-jar-download]: https://www3.hhu.de/stups/downloads/plues/mincer/mincer-3.2.0-SNAPSHOT-standalone.jar
+[data-release]: https://github.com/plues/data/releases/tag/3.0.0
+[plues-release]: https://github.com/plues/plues/releases/tag/2.6.0
+[java-download]: http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
+[plues-data-docs]: https://github.com/plues/data/blob/master/docs.md
