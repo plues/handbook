@@ -12,9 +12,9 @@ before_script:
 script:
 - make travis
 after_success:
-  - cp handbook-1.8.1.pdf latest.pdf
-  - cp handbook-1.8.1.html latest.html
-  - travis-custom-deploy sftp handbook-1.8.1.pdf handbook-1.8.1.html latest.pdf latest.html
+  - cp handbook-1.8.2.pdf latest.pdf
+  - cp handbook-1.8.2.html latest.html
+  - travis-custom-deploy sftp handbook-1.8.2.pdf handbook-1.8.2.html latest.pdf latest.html
 notification:
   email:
     on_success: never
