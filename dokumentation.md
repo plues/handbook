@@ -103,7 +103,7 @@ Um ein vernünftiges Arbeiten mit dem Planungswerkzeug für überschneidungsfrei
 ### <a name="fa"></a> 2.1 Starten der Hauptanwendung und Einlesen der Daten
 
 
-Die Hauptanwendung wird durch die Datei **plues-2.7.1** gestartet. Nach dem Starten erscheint folgender Bildschirm:
+Die Hauptanwendung wird durch die Datei **plues-2.7.2** gestartet. Nach dem Starten erscheint folgender Bildschirm:
 
 
 ![](images/hauptanwendung1.png)
@@ -1644,6 +1644,6 @@ Solch eine Fehlermeldung entsteht, wenn bestimmte Studiengänge oder Module nich
 [mincer-windows-download]: https://github.com/plues/mincer/releases/download/3.2.0/mincer-3.2.0.exe
 [mincer-jar-download]: https://github.com/plues/mincer/releases/download/3.2.0/mincer-3.2.0-standalone.jar
 [data-release]: https://github.com/plues/data/releases/tag/3.1.0
-[plues-release]: https://github.com/plues/plues/releases/tag/2.7.1
+[plues-release]: https://github.com/plues/plues/releases/tag/2.7.2
 [java-download]: http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html
 [plues-data-docs]: https://github.com/plues/data/blob/master/docs.md
