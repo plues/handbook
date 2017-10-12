@@ -1,23 +1,23 @@
 MARKDOWN=$(filter-out README.md,$(wildcard *.md))
 
 default: handbook.pdf handbook.html
-travis: handbook-1.8.2.html handbook-1.8.2.pdf
+travis: handbook-1.8.3.html handbook-1.8.3.pdf
 
 .PHONY: dependencies
 dependencies:
 	git submodule update --init
 
-handbook-1.8.2.html:  $(MARKDOWN) dependencies
+handbook-1.8.3.html:  $(MARKDOWN) dependencies
 	pandoc -f markdown -t html --css=markdown-css-themes/markdown10.css \
 		--standalone --self-contained $(MARKDOWN) -o $@
 
-handbook.html: handbook-1.8.2.html
+handbook.html: handbook-1.8.3.html
 	cp $< $@
 
-handbook-1.8.2.pdf: $(MARKDOWN)
+handbook-1.8.3.pdf: $(MARKDOWN)
 	pandoc --standalone -f markdown -t latex $(MARKDOWN) -o $@
 
-handbook.pdf: handbook-1.8.2.pdf
+handbook.pdf: handbook-1.8.3.pdf
 	cp $< $@
 
 clean:
