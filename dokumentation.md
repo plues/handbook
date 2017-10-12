@@ -103,7 +103,7 @@ Um ein vernünftiges Arbeiten mit dem Planungswerkzeug für überschneidungsfrei
 ### <a name="fa"></a> 2.1 Starten der Hauptanwendung und Einlesen der Daten
 
 
-Die Hauptanwendung wird durch die Datei **plues-2.7.1** gestartet. Nach dem Starten erscheint folgender Bildschirm:
+Die Hauptanwendung wird durch die Datei **plues-2.7.2** gestartet. Nach dem Starten erscheint folgender Bildschirm:
 
 
 ![](images/hauptanwendung1.png)
